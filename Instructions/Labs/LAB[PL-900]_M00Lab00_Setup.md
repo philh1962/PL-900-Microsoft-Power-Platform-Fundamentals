@@ -71,7 +71,7 @@ In this Module 0 lab, you will acquire a Power Platform trial tenant and access 
 
 2.  If the **Environment** displayed in the top right is not your Practice environment, click to select your Environment.
 
-3.  On the Home page, click on the **Portal from blank** panel under **Make your own app**
+3.  On the Home page, click on the **Create** then **Portal from blank** panel
 
     > If you do not see this option, try zooming out.
 
@@ -79,7 +79,7 @@ In this Module 0 lab, you will acquire a Power Platform trial tenant and access 
 
     -   Enter **```Bellows College Visitors```** as the portal **Name**
 
-    -   Provide a unique URL; **something**.powerappsportals.com (if the name has been taken, choose a different one)
+    -   Provide a unique URL; **something**.powerappsportals.com (if the name has been taken, choose a different one - perhaps using your initials)
 
     -   Select a base portal **Language**
 
