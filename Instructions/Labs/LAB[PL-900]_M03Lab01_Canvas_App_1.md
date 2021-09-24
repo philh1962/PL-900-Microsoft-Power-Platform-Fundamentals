@@ -8,18 +8,11 @@ lab:
 
 ## Lab: How to build a canvas app, Part 1
 
-### Important Notice (Effective November 2020):
-Common Data Service has been renamed to Microsoft Dataverse. Some terminology in Microsoft Dataverse has been updated. For example, entity (now **table**), field (now **column**), and record (now **row**) may be out of date. Please keep this in mind as you work through the labs. We expect to have our content fully up to date very soon.
 
-For more information and for a complete list of affected terms, please visit [What is Microsoft Dataverse?](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro#terminology-updates)
 
 # Scenario
 
-Bellows College is an educational organization with multiple buildings on campus. Campus visits are currently recorded in paper journals. The information is not captured consistently, and there are no means to collect and analyze data about the visits across the entire campus. 
-
-Campus administration would like to modernize their visitor registration system where access to the buildings is controlled by security personnel and all visits are required to be pre-registered and recorded by their hosts.
-
-Throughout this course, you will build applications and perform automation to enable the Bellows College administration and security personnel to manage and control access to the buildings on campus.  
+We will continue our implementation of the Bellows College visitor recording system. 
 
 In part 1 this lab, you will design a Power Apps canvas app that college staff can use to manage visits for their guests.
 
@@ -29,7 +22,7 @@ We will follow the below outline to design the canvas app:
 
 -   Create the app from data using the phone form factor template
 -   Configure a detail page with visit info
--   Configure an edit page to create to visits
+-   Configure an edit page to create visits
 -   Configure a gallery control to show the visits
 -   Add filtering on the gallery data source to show only future visits
 
@@ -38,11 +31,6 @@ We will follow the below outline to design the canvas app:
 * Completion of **Module 0 Lab 0 - Validate lab environment**
 * Completion of **Module 2 Lab 1 - Introduction to Microsoft Dataverse**
 
-## Things to consider before you begin
-
--   What is the most prevalent form factor for the target audience?
--   Estimate the number of records in the system 
--   How to narrow the records selected to improve app performance and user adoption
 
 # Exercise \#1: Create Staff Canvas App
 
@@ -59,6 +47,8 @@ In this task, you will create a canvas app using the phone layout template based
     -   Select your **environment** at the top right if it is not already set to
         your Practice environment.
 
+    -   Select **+ Create** Note that apps and portals can be started from blank, from data, or from templates.  
+
     -   Select the **Dataverse** icon within **Start from data** on the Home screen.
 
 2.  Connect to your Visits table
@@ -69,19 +59,19 @@ In this task, you will create a canvas app using the phone layout template based
 
     -   Locate and select your **Visits** table
 
-    -   Select **Connect**
+    -   Select **Connect**  This will open the Power Apps Studio editor. 
 
-3.  The **Welcome to Power Apps Studio** window may appear. Click **Skip**.
+3.  The **Welcome to Power Apps Studio** window may appear. Click **Skip**.  You are now editing a new (as yet unnamed) app built on the data we imported in the last lab.  You can preview the app in this unimproved state by clicking the play button near the top left corner of the screen (small play triangle).
 
 4.  Save application
 
     -   Click **File \> Save**.
 
-    -   Press **Save**.
+    -   Press **Save**.   Your new app (called App) will now be visible in the Apps section of the Power Apps maker portal, along with the Bellows College Portal and the Portal Management app that is supplied with it.
 
 ## Task \#2: Configure Visits Detail Form
 
-In this task, you will configure the Detail form to view information about individual visit records.
+In this task, you will configure the Detail form to view information about individual visit records.  The template detail form only shows the name and date/time when the record was created.  We will add fields for scheduled and actual start and end, building and visit code, and remove the created on field. 
 
 1. Select the **Back** arrow at the top left to go back to the app definition.
 
@@ -93,23 +83,21 @@ In this task, you will configure the Detail form to view information about indiv
 
 5.  Click **Add field**
 
-6.  Select the following fields:
+6.  Select the following fields in this order:
 
-    * Actual End
-    
-    * Actual Start
+    * Code
     
     * Building 
     
-    * Code
+    * Scheduled Start
     
     * Scheduled End
     
-    * Scheduled Start
+    * Actual Start
     
-    * Visitor
+    * Actual End
     
-7.  Click **Add**
+7.  Click **Add**  You will see that the new fields have been added in the order in which they were selected.
 
 8.  Rearrange fields in the **Fields** pane by dragging and dropping field names up or down. Recommended order is:
     * Code, Name, Building, Visitor, Scheduled Start, Scheduled End, Actual Start, Actual End
@@ -119,13 +107,13 @@ In this task, you will configure the Detail form to view information about indiv
 
 10.  Close the **Fields** pane.
  
-11.  To preserve work in progress, click **File** then click **Save**. Use the back arrow to return to the app.
+11.  To preserve work in progress, click **File** then click **Save**. Use the back arrow to return to the app.  We will publish it later.
 
 ## Task \#3: Configure Visits Edit Form
 
-In this task, you will configure a form to edit information about individual visit rows.
+In this task, you will configure a form to edit information about individual visits.  The template screen only shows the record name and creation date/time, so we will add fields to show the building, visitor and scheduled start and finish.  Scheduled start and finish columns were created as required columns, so users will be required to enter data for them on this form.   
 
-1.  Expand **EditScreen1** under **Tree view**
+1.  Expand **EditScreen1** under **Tree view**  (The last row) 
 
 2.  Select **EditForm1**
 
@@ -135,19 +123,20 @@ In this task, you will configure a form to edit information about individual vis
 
 5.  Click **Add field**
 
-6.  Select the following fields:
+6.  Select the following fields in the following order:
 
     * Building 
     
-    * Scheduled End
+    * Visitor
     
     * Scheduled Start
     
-    * Visitor
+    * Scheduled End
     
 7.  Click **Add**
 
-8.  Rearrange fields in the **Fields** pane by dragging and dropping field names up or down. Recommended order is:
+8.  You can rearrange fields in the **Fields** pane by dragging and dropping field names up or down, but if you selected them in the order of above they will be ordered correctly.
+9.    Recommended order is:
     
     * Name, Building, Visitor, Scheduled Start, Scheduled End
     >**Tip:** You can collapse each field by clicking the down arrow beside the field name. 
@@ -170,7 +159,7 @@ In this task, you will configure the pre-generated gallery to display the title,
 
 3.  Select **TemplateSize** property from in the Advanced Properties panel on the right
 
-4.  Replace the expression with the following `Min(150, BrowseGallery1.Height - 60)`. That will ensure sufficient space for additional information.
+4.  Replace the expression with the following `Min(150, BrowseGallery1.Height - 60)`. (You can cut-and-paste from this screen using Ctl-C and Ctl-V).  You will see the size of each entry change, ensuring sufficient space for additional information.
 
 5.  In the app preview, select the first Date Time field in the gallery.
 
@@ -188,13 +177,13 @@ In this task, you will configure the pre-generated gallery to display the title,
 
 ## Task #5: Add date filter
 
-Because number of visits continuously grows, users need a feature to filter the visits gallery. For example, the user may want to see only the future visits. In this task, you will add ability to show visits only after a date selected by the user.
+Because number of visits continuously grows, users need a feature to filter the visits gallery. For example, the user may want to see only the future visits. In this task, you will add the ability to show visits only after a date selected by the user.
 
 1. Select **BrowseScreen1**
 
-2. Select **Insert** menu at the top.
+2. Select **Insert** from the menu on the top line.
 
-3. Click **Input** and select **Date picker**.
+3. Select **Input** from the next line down and choose select **Date picker**.
 
 4. Using either keyboard or mouse, position the control below the search box.
 
@@ -206,7 +195,7 @@ Because number of visits continuously grows, users need a feature to filter the 
 
 8. Locate the **Items** property and click in the text box.
 
-9. In the expression, locate **[@Visits]** and replace it with `Filter(Visits,'Scheduled End' >= DatePicker1.SelectedDate)`. The full expression should look like the following:
+9. In the expression, locate **[@Visits]** and replace it with `Filter(Visits,'Scheduled End' >= DatePicker1.SelectedDate)`. The full expression should look like the following.  (YOu may find it easier to cut-and-paste the whole expression).
 
    ```
    SortByColumns(
@@ -225,7 +214,7 @@ Because number of visits continuously grows, users need a feature to filter the 
    
 10. To preserve work in progress, click **File** then click **Save**. Use the back arrow to return to the app.
 
-Your screen should look approximately like the following:
+Your screen should look approximately like the following, but with the search date being today's date:
 
 ![Canvas filtering gallery](media/2-canvas-browse.png)
 
@@ -243,13 +232,13 @@ In this exercise you will test the application and, once successful, you will ad
     
     -   Test the filter by selecting different dates in the date picker control
     
-    -   Select a visit and verify that display form is working properly
+    -   Select a visit and verify that display form is working properly by selecting the **>** symbol to view item details.
     
     -   Return to the gallery and press **+** to create a new visit. Verify that edit form contains required columns including visitor, building, and scheduled start and end dates.
     
-    -   Fill in the information and submit. Verify that the new record appears in the gallery.
+    -   Fill in the information and submit. Verify that the new record appears in the gallery.  You may need to scroll down or resort the gallery to see new records.
     
-    -   Create at least 2 more visits.
+    -   Create and verify at least 2 more visits.
     
     -   Press **ESC** key or click the **X** icon to close preview mode.
 
@@ -266,12 +255,15 @@ In this exercise you will test the application and, once successful, you will ad
     -   Close the **Designer** browser window or tab.
 
     -   Click **Leave** if prompted when tried to close the browser window.
+    
+    -   After publishing, when you select your new App in the list in the Power Apps maker portal, the new version will run.  Previously, new versions could only by accessed by selecting edit and previewing. 
 
-## Task #2: Add App to Solution and publish 
+## Task #2: Add App to Solution and publish
+We have created out app outside the our Campus Management Solution.  Adding the App to the solution and publishing all customizations will allow us to deploy the latest versions of all the necessary components. 
 
 1. Open the Campus Management solution.
 
-   * Sign in to <https://make.powerapps.com>
+   * Sign in to <https://make.powerapps.com>  if you are not already logged in.
    
    * If the Environment displayed in the top right is not your Practice environment, select your **Environment**. 
    
@@ -283,13 +275,17 @@ In this exercise you will test the application and, once successful, you will ad
 
 3. Select **Outside solutions** tab.
 
-4. Select your **Campus Staff** app, click **Add**.
+4. Select your **App** app, click **Add**.
 
-5. Select **Publish all customizations**.
+5.  The Solution will now have contain three tables (Building, Visit, Contact) and the new App.  Select the new app and click **Settings**, then click the pencil to rename the App.  Rename it **Campus Staff**  
 
-# Challenges
+6.  Select **Solutions**  and choose **Publish all customizations**.
 
-* Calendar view of all visits and filtering by date range
-* Ability to create and manage contacts as part of the app
-* How to display multiple meetings during a single visit
+# Extension
+
+* You can **set a begin and end date range** by adding another date picker input, and adding to the gallery filter
+
+SortByColumns(Search(Filter(Visits, 'Scheduled Start' >= DatePicker1.SelectedDate,'Scheduled End' <= DatePicker2.SelectedDate), TextSearchBox1.Text, "bc_code","bc_name"), "bc_code", If(SortDescending1, Descending, Ascending))
+
+
 

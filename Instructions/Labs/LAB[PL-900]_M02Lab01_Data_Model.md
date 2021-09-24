@@ -206,7 +206,7 @@ We would like to assign each visit a unique number that can be easily entered an
     
     * Select **Date and Time** for **Data Type**.
     
-    * In **Required**, leave this as **Optional**.
+    * In **Required**, leave this as **Optional**.  Unlike the scheduled date and times, the actual visit start times cannot be completed in advance so should be left optional.
     
     * Expand **Advanced options** section.
     
@@ -222,7 +222,7 @@ We would like to assign each visit a unique number that can be easily entered an
     
     * Select **Date and Time** for **Data Type**.
     
-    * In **Required**, leave this as **Optional**.
+    * In **Required**, leave this as **Optional**.  Unlike the scheduled date and times, the actual visit end times cannot be completed in advance so should be left optional.
     
     * Expand **Advanced options** section.
     
@@ -316,7 +316,7 @@ In this task you will import a solution that contains the Power Automate flow re
 
 12. Wait until the import is complete.
 
-## Task #2: Import Data  
+## Task #2: Import Data
 In this section we will run a Power Automate flow to generate visit data for the upcoming labs.
 
 1. Open **Data Import** solution.  This will open a Power Automate flow called **Import Data**
