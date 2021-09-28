@@ -85,7 +85,7 @@ The following have been identified as requirements you must implement to complet
 
 8. Click **New Step**. This is the step that will create and send email to the visitor.
 
-9. Search for *mail*, select **Mail** connector and **Send an email notification** action 
+9. Search for *email*, select **Send an email V2 Office 365 Outlook** connector and **Send an email notification** action 
 
    * If asked to Accept terms and conditions for using this action, click **Accept**.
    
@@ -116,7 +116,7 @@ The following have been identified as requirements you must implement to complet
 
     Leave this flow tab open for the next task. You flow should look approximately like the following:
 
-![image](https://user-images.githubusercontent.com/78555251/118340724-ccb13300-b4d9-11eb-96c2-c7b005bb9ac0.png)
+![image](C:\Users\phili\Desktop\flow2)
 
 ## Task \#2: Validate and test the flow
 
