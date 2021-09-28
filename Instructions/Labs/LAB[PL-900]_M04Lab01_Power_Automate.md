@@ -81,7 +81,7 @@ The following have been identified as requirements you must implement to complet
    
    * In the **Row ID** field, select **Visitor (Value)** from the Dynamic content list.
    
-   * On this action, click the ellipsis (**...**) and click **Rename**. Rename this action **"Get the Visitor"**. This is a good practice, so you and other flow editors can understand the purpose of the step without having to dive into the details.
+   * On this action, click the ellipsis (**...**) and click **Rename**. Rename this action **"Get the Visitor"**. This is a good practice, so you and other flow editors can understand the purpose of the step without having to dive into the details, as before.
 
 8. Click **New Step**. This is the step that will create and send email to the visitor.
 
@@ -114,7 +114,7 @@ The following have been identified as requirements you must implement to complet
 
 11. Press **Save**
 
-    Leave this flow tab open for the next task. You flow should look approximately like the following:
+    Leave this flow tab open for the next task. With all steps expanded, your flow should look approximately like the following:
 
 ![image](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow2.png)
 
@@ -152,7 +152,7 @@ The following have been identified as requirements you must implement to complet
 
 # Exercise #2: Create Security Sweep flow
 
-**Objective:** In order to meet the second requirement,  in this exercise you will create a Power Automate flow that performs a security sweep every 15 minutes, and notifies security if any visitors overstay their scheduled time.
+**Objective:** In order to meet the second design requirement, in this exercise you will create a Power Automate flow that performs a security sweep every 15 minutes, and notifies security if any visitors overstay their scheduled time.
 
 ## Task #1: Create flow to retrieve records
 
@@ -168,11 +168,11 @@ The following have been identified as requirements you must implement to complet
 
 2. Click **New** and select **Cloud flow**. This will open the Power Automate flow editor in a new window.
 
-3. Search for *recurrence*, select **Schedule** connector, and then select the **Recurrence** trigger.
+3. In the Search box search for *recurrence*, select **Schedule** connector, and then select the **Recurrence** trigger.
 
 4. Set **Interval** to **15 minutes**
 
-5. Click **New step**. Search for *Current* and select **Microsoft Dataverse** connector. Select **List rows** action.
+5. Click **New step**. Select **Microsoft Dataverse** connector. Select **List rows** action.
 
    * Enter **Visits** as **Table name**
    
@@ -185,12 +185,12 @@ The following have been identified as requirements you must implement to complet
    ```
    
    * To break it down:
-       * **statecode eq 0** filters active visits (where Status equal Active)
+       * **statecode eq 0** filters active visits (where Status equals Active)
        * **bc_actualstart ne null** restricts search to visits where Actual Start has a value, i.e. there was a checkin
        * **bc_actualend eq null** restricts search to visits where there was no check out (Actual End has no value) 
        * **Microsoft.Dynamics.CRM.OlderThanXMinutes(PropertyName='bc_scheduledend',PropertyValue=15)** restricts visits where visits meant to complete more than 15 minutes ago.
 
-   * On this action, click the ellipsis (**...**) and click **Rename**. Rename this action **"List active visits that ended more than 15 minutes ago"**. This is a good practice, so you and other flow editors can understand the purpose of the step without having to dive into the details.
+   * On this action, click the ellipsis (**...**) and click **Rename**. Rename this action **"List active visits that ended more than 15 minutes ago"**. This is a good practice, so you and other flow editors can understand the purpose of the step without having to dive into the details, as before.
 
 6.  Click **New step**. Search for *Apply*, select **Apply to each** action 
 
@@ -206,9 +206,9 @@ The following have been identified as requirements you must implement to complet
     
     * Select **Buildings** as **Table name**
     
-    * Select **Building (Value)** as **Row ID** from the Dynamic content
+    * Select **Building (Value)** as **Row ID** from the Dynamic content. (This will specify the building).
     
-    * Click **...** beside **Get a record**, select **Rename**. Enter **Get building** as step name
+    * Click **...** beside **Get a row by ID**, select **Rename**. Enter **Get building** as step name
     
 9.  Retrieve Visitor data for related record
 
@@ -220,26 +220,26 @@ The following have been identified as requirements you must implement to complet
     
     * Select **Contacts** as **Table name**
     
-    * Select **Visitor (Value)** as **Row ID** from the Dynamic content
+    * Select **Visitor (Value)** as **Row ID** from the Dynamic content.  (This will specify the visitor).
     
-    * Click **...** beside **Get a record**, select **Rename**. Enter **Get visitor** as step name
+    * Click **...** beside **Get a row by ID**, select **Rename**. Enter **Get visitor** as step name
     
 11.  Send email notification
 
-     * Click **Add an action** inside the Apply to Each loop. Add **Send an email notification** action from **Mail** connection.
+     * Click **Add an action** inside the Apply to Each loop. Select **Send an email V2 Office 365 Outlook** connector and **Send an email notification** action.
 
 12.  Enter your email address as **To**
 
-13.  Enter the following in the **Subject** field. **Full Name** is a dynamic content from the **Get visitor** step.
-
-   ```
-   {Full Name} overstayed their welcome
-   ```
-   
-14.  Enter the following in the **Body** field. **Name** is a dynamic content from **Get building** step.
+13.  Enter the following in the **Subject** field. **Name** is dynamic content from the **Get building** step.
 
    ```
    There is an overstay in building {Name}.
+   ```
+   
+14.  Enter the following in the **Body** field. **Full Name** is dynamic content from **Get visitor** step.
+
+   ```
+   {Full Name} overstayed their welcome   
          
    Best,
          
@@ -250,9 +250,9 @@ The following have been identified as requirements you must implement to complet
 
 18.  Press **Save**
 
-    Your flow should look approximately like the following:
+   With all steps expanded, your flow should look approximately like the following:
 
-![Security sweep scheduled flow part 1](media/4-power-automate-security-sweep-flow.png)
+![Security sweep scheduled flow part 1](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow3.png)
 
 ## Task #2: Validate and test the flow
 
