@@ -63,6 +63,8 @@ In this task, you will create a canvas app using the phone layout template based
 
 3.  The **Welcome to Power Apps Studio** window may appear. Click **Skip**.  You are now editing a new (as yet unnamed) app built on the data we imported in the last lab.  You can preview the app in this unimproved state by clicking the play button near the top left corner of the screen (small play triangle).
 
+**About the Power Apps Studio** The app editor is not intuitive, especially for beginners.  You can change a selected property in two ways - firstly from the dropdown selector on the left of the function line at the top of the screen. This lists the propertues alphabetically. Alternatively, you can use the shortcuts in the Properties tab or Advanced tab with searchbox.  The first allows you to put in values quickly and directly, the second gives you someconvenient shortcuts and the ability to select colours from a palette rather than type RGBA values.  They both produce the same results.  In these exercises we will show you both methods and inform you which we are using.
+
 4.  Save application
 
     -   Click **File \> Save**.
@@ -157,7 +159,7 @@ In this task, you will configure the pre-generated gallery to display the title,
 
 2.  Select **BrowseGallery1**
 
-3.  Select **TemplateSize** property from in the Advanced Properties panel on the right
+3.  Select **TemplateSize** property from in Advanced Properties panel on the right *equally, you could choose TemplateSize from the properties dropdown on the function line at the top*.  
 
 4.  Replace the expression with the following `Min(150, BrowseGallery1.Height - 60)`. (You can cut-and-paste from this screen using Ctl-C and Ctl-V).  You will see the size of each entry change, ensuring sufficient space for additional information.
 

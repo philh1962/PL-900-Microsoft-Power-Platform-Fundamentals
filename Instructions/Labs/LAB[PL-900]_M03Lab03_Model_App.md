@@ -7,11 +7,6 @@ lab:
 # Module 3: Get started with Power Apps
 ## Lab 3: How to build a model-driven app
 
-### Important Notice (Effective November 2020):
-Common Data Service has been renamed to Microsoft Dataverse. Some terminology in Microsoft Dataverse has been updated. For example, entity (now **table**), field (now **column**), and record (now **row**) may be out of date. Please keep this in mind as you work through the labs. We expect to have our content fully up to date very soon.
-
-For more information and for a complete list of affected terms, please visit [What is Microsoft Dataverse?](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro#terminology-updates)
-
 # Scenario
 
 Bellows College is an educational organization with multiple buildings on campus. Campus visitors are currently recorded in paper journals. The information is not captured consistently, and there are no means to collect and analyze data about the visits across the entire campus. 
@@ -20,7 +15,7 @@ Campus administration would like to modernize their visitor registration system 
 
 Throughout this course, you will build applications and perform automation to enable the Bellows College administration and security personnel to manage and control access to the buildings on campus. 
 
-In this lab, you will build a Power Apps model-driven app to allow the backoffice campus staff to manage visit records across the entire campus.
+In this lab, you will build a Power Apps model-driven app to allow the backoffice campus staff to manage visit records across the entire campus. Unlike canvas apps, model-driven apps closely resemble existing Dynamics 365 apps and allow for fast deployment and minimal training.
 
 # High-level lab steps
 
@@ -45,13 +40,7 @@ Both will be integrated to the model-driven app for a better user-experience.
 * Completion of **Module 0 Lab 0 - Validate lab environment**
 * Completion of **Module 2 Lab 1 - Introduction to Microsoft Dataverse**
 
-## Things to consider before you begin
 
--   What changes should we make to improve the user experience?
-
--   What should we include in a model-driven app based on the data model we have built?
-    
--   What customizations can be made on the sitemap of a model-driven app?
 
 
 # Exercise \#1: Customize Views and Forms
@@ -68,13 +57,13 @@ Both will be integrated to the model-driven app for a better user-experience.
 
 4.  Click to open your **Campus Management** solution.
 
-5.  Click to open the **Visit** entity.
+5.  Click on the **Visit** entity to open it.
 
 6.  Select the **Forms** tab and click to open the **Main** form type. 
 
     > By default, the form has two fields: Name (Primary Field) and Owner.
     
-7.  Select **+ Form field** and ddd the following fields below the **Owner** field by dragging columns to the form or simply clicking column names:
+7.  Select **+ Form field** and add the following fields below the **Owner** field by dragging columns to the form or simply clicking column names:
 
     * **Building**
     * **Visitor**
@@ -89,14 +78,14 @@ Both will be integrated to the model-driven app for a better user-experience.
 
 9.  With the **Code** field still selected, check the checkbox for **Read-only** in the Properties panel.
 
-10.  Select **Owner** field. In the Properties panel, change the **Field label** to **Host**
+10.  Select **Owner** field. In the Properties panel, change the field's **label** from **Owner** to **Host**
 
 11.  Click **Save** at the top right and wait for the save to complete.
 
 12.  Click **Publish** at the top right and wait for the publishing to complete.
 
 13.  Click **Back** at the top left of the screen. You should now be back to the
-     Visit entity Forms Tab.
+     Visit table Forms Tab.
 
 ## Task \#2: Edit Visit Views
 
@@ -138,7 +127,7 @@ Now, we will clone the view to create a new view for today's visits.
 
 14.  Add **Actual Start** and **Actual End** fields to the view. 
 
-    > **Note:** Since we no longer filter on the view status, we will get all today's visits including completed ones. These fields will help to differentiate completed visits and visits in progress.
+    **Note:** Since we no longer filter on the view status, we will see all today's visits including completed ones. These fields will help to differentiate completed visits and visits in progress.
 
 15.  Click on the **dropdown arrow** by the Save button (be careful not to press the button itself) and select **Save As**.
 
@@ -223,7 +212,7 @@ Now, we will clone the view to create a new view for today's visits.
     
     -   Select **Entity** from the dropdown for **Type** and search for **Building** table from the dropdown for **Entity**.
 
-8.  Click **Save**. This will show the loading screen while the changes are getting saved.
+8.  Click **Save**. This will show the loading screen while the changes are being saved.
 
 9.  Click **Publish** to publish the sitemap and wait for the publishing to complete.
 
@@ -257,7 +246,7 @@ Now, we will clone the view to create a new view for today's visits.
     
 2.  Create new Contact
 
-    -   The app should open to the **Active Contacts** view
+    -   The app should open to the **Active Contacts** view.  You should also see the Security group with Contacts and Visits tables, and the Settings group with the Buildings table.
 
     -   Click **New** from the top menu.
 
@@ -305,9 +294,12 @@ Now, we will clone the view to create a new view for today's visits.
 
 ![Sample model driven app](media/3-model-app.png)
 
+
+
+
 # Challenges
 
 * Select specific views and forms for Visits and Buildings
 * Security personnel typically work in a single building. How would you provide an easy way for them to display visits only for a selected building?
 * Restrict access to specific entities, e.g. Buildings should be read-only for all staff members except the administrators
-* What Dashboards would you consider adding to the app?
+

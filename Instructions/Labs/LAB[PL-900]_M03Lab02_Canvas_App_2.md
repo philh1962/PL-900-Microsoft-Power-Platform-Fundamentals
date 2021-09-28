@@ -7,10 +7,6 @@ lab:
 # Module 3: Get started with Power Apps
 ## Lab 2: How to build a canvas app, part 2
 
-### Important Notice (Effective November 2020):
-Common Data Service has been renamed to Microsoft Dataverse. Some terminology in Microsoft Dataverse has been updated. For example, entity (now **table**), field (now **column**), and record (now **row**) may be out of date. Please keep this in mind as you work through the labs. We expect to have our content fully up to date very soon.
-
-For more information and for a complete list of affected terms, please visit [What is Microsoft Dataverse?](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro#terminology-updates)
 
 # Scenario
 
@@ -38,15 +34,10 @@ You will follow the below outline to design the canvas app:
 * Completion of **Module 0 Lab 0 - Validate lab environment**
 * Completion of **Module 2 Lab 1 - Introduction to Microsoft Dataverse**
 
-## Things to consider before you begin
-
--   What information would a security officer need quick access to?
--   What should happen if visitor code is invalid?
--   What should happen if the visitor arrives outside of the scheduled hours?
 
 # Exercise \#1: Create Security Canvas App
 
-**Objective:** In this exercise, you will create a canvas app.
+**Objective:** In this exercise, you will create a canvas app to be used by security officers to log arrivals and departures.
 
 ## Task \#1: Create Canvas App
 
@@ -65,17 +56,13 @@ You will follow the below outline to design the canvas app:
     -   Click **New** and select **App \| Canvas App \| Phone Form Factor**.
         This will open the App Editor in a New window.
         
-    -   Click **Skip** if presented with the Welcome to Power Apps Studio dialogue.
     
 3.  Save the canvas app
-
-    -   Click **File** and select **Save As**.
     
-    -   Check if **The cloud** is selected. 
+    -   Enter **[Your Last Name] Campus Security** for Name and click **Create**
     
-    -   Enter **[Your Last Name] Campus Security** for Name and click **Save**.
+    -   Click **Skip** if presented with the Welcome to Power Apps Studio dialogue.
         
-    -   Click the **Back** arrow at the top left (below Power Apps) to return to the app.
 
 3.  Connect to data source (Visits)
 
@@ -87,13 +74,15 @@ You will follow the below outline to design the canvas app:
     
     -   Select **Visits** and wait for the Visit table to display on the Data tab.
     
-4.  To preserve work in progress, click **File** then click **Save**. Use the back arrow to return to the app.
+4.  To preserve work in progress, click **File** then click **Save** an save to the cloud. Use the back arrow to return to the app.
 
 ## Task \#2: Display Visitor information
 
 1.  Add search box
 
-    -   Select the **Tree View** tab on the left navigation bar.
+    -   Click the Hamburger icon to expand the left navigation bar.
+
+    -   Select the **Tree View** tab.
     
     -   Select **Screen1**.
     
@@ -105,9 +94,9 @@ You will follow the below outline to design the canvas app:
 
     -   While still selecting the Text input object, select the text in the **Default** property and clear the value.
     
-    -   Select **Hint Text** property and enter `"Enter visitor code"` as the value (including double quotes)
+    -   Select **Hint Text** property and enter `"Enter visitor code"` as the value (including double quotes.  (This will show hint text when users hover over the search box).
     
-    -   Click on **...** next to the control name in tree view (TextInput1), select **Rename**, change the name to `textCode`
+    -   Click on **...** next to the control name in tree view (TextInput1), select **Rename**, change the name to `textCode`  (It is good practice to rename controls so that they can be easily found later.)
     
 3.  Add a form view
 
@@ -115,53 +104,53 @@ You will follow the below outline to design the canvas app:
    
     -   Drag to position the form and align with the bottom of the screen
    
-    -   While still selecting the new form, select **DataSource** property and select **Visits**
+    -   You will see that the new form is not connected to data.  Select **DataSource** property from the dropdown and select **Visits**
    
-    -   In the properties pane select **Horizontal** as **Layout**
 
 4.  Edit form view
 
     -   While still selecting the new form, click **Edit fields**
 
-    -   Remove both the **Name** and **Created On** fields
-
-    -   Click **Add field** and select the following fields: **Actual End**, **Actual Start**, **Building**, **Scheduled End**, **Scheduled Start**, **Visitor**
+    -   Click **Add field** and select the following fields in the following order: **Visitor**, **Building**, **Scheduled Start**, **Scheduled End**,  **Actual Start**, **Actual End**
    
     -   Press **Add**
    
-    -   Change the order of the selected fields by dragging the field cards in the list. Recommended order is: Visitor, Building, Scheduled Start, Scheduled End, Actual Start, Actual End (you can collapse the fields to make them easier to drag)
+    -   (You change the order of the selected fields by dragging the field cards in the list, but it is easier to add them in the chosen order to begin with you can collapse the fields to make them easier to drag).
    
     -   Click the **X** to close the Fields pane
+    
+    -   Select the box of the form and stretch it up so that you can see all the fields.
    
 5.  While still selecting the form view, select the Advanced tab on the Properties pane. Select **Item** property and enter `LookUp(Visits, Code = textCode.Text)` 
 
 6.  To preserve work in progress, click **File** then click **Save**. Use the back arrow to return to the app.
 
-7.  Prepare to test the app
+7.  Prepare to test the app using some data from the Visit table
 
-    -   Switch to the browser tab containing the solution
+    -   Open a new browser window in your Practice environment.
+    
+    -   In this window, open the **Dataverse** tab and select **Tables**
 
-    -   Click **Done** in the pop-up window
-   
     -   Select **Visit** table
    
-    -   Select **Data** tab
+    -   Select **Data** tab   (This will show the sample data you imported earlier).
+   
    
     -   Open the View Selector in the top right by clicking the current View name, **Active Visits**
    
-    -   Change the View to **All columns**
-   
+    -   Change the View to **Custom columns** (This will show the new columns that were added on import.)
+    
     -   Locate a Visit row that does not have an Actual Start or Actual End value (i.e., both columns are blank). Select and copy the **Code** for this Visit.
 
 8.  Test the app
 
     -   Switch to the browser tab with the app, press **F5** or click the **Play** icon at the upper-right corner to preview the app.
    
-    -   Paste the copied value into the search textbox, verify that the record is displayed in the form
+    -   Paste the copied value into the search textbox, verify that the record is displayed in the form with the correct Scheduled start and end dates.  Actual start and end dates which were blank will be default.
    
 9.  Clear the search textbox contents.
    
-10.  Press **ESC** to exit the running app.
+10.  Press **ESC** or select the **X** to exit the running app.
 
 ## Task \#3: Add Check In and Check Out Buttons
 
@@ -171,7 +160,7 @@ In this task, we will create buttons for the user to check in and check out of t
 
     * Select **textCode** control
    
-    * In the properties pane, select the **Advanced** tab and select **OnChange** property
+    * In the properties pane, select the **Advanced** tab and select **OnChange** property.  Currently this is set to false.
    
     * Enter the following expression `Set(Visit, LookUp(Visits, Code = textCode.Text))`
     
@@ -199,11 +188,11 @@ In this task, we will create buttons for the user to check in and check out of t
    
 ## Task \#4: Enable and disable buttons depending on visit data
 
-Once users have looked up the visit, we would like them to use the Check In button to check in for that visit. We would like to enable **Check In** button when the visit record has been located (not blank), record status is active, and the visit has not started yet, i.e. the actual start value is blank.
+Once users have looked up the visit, we would like them to use the Check In button to check in for that visit. We would like to enable **Check In** button for to supply actual times for visits that have been previously scheduled. i.e. when the visit record has been located (not blank), record status is active, and the visit has not started yet so the actual start value is blank.  In order to do this we are going to use the **Display Mode** property of the two buttons.  This can be changed in the dropdown menu or in the shortcut menu.  Having set this property we are going to test this functionality using the code value from the previous task.
 
-1. Select the **Check In button** and click on the **Display Mode** property of the button in the Properties tab
+1. Select the **Check In button** and click on the **Display Mode** property of the button in the advanced section of the Properties tab
 
-2. Enter the expression below in the function bar:
+2. Enter the expression below in the function bar as the OnSelect property:
 
       ```
       If(!IsBlank(Visit) 
@@ -222,12 +211,13 @@ Once users have looked up the visit, we would like them to use the Check In butt
    * **IsBlank(Visit.'Actual Start')** - Active Start field does not have any data in it
    * **DisplayMode.Edit, DisplayMode.Disabled** - If the above conditions are met, the button will become editable. If not, the button will remain disabled.
 
-We would like to enable **Check Out** button when the visit record has been located (not blank), record status is active, and the visit has already started, i.e. the actual start value is not blank.
 
-3. Select the Check Out button and click on the **Display Mode** property of the button in the Properties tab
+We would also like to enable **Check Out** button when the visit record has been located (not blank), record status is active, and the visit has already started, i.e. the actual start value is not blank.
 
-4. Enter the expression below in the function bar:
+3. Select the Check Out button and change the **Display Mode** property of the button.  
 
+4. Enter the expression below in the function bar as the OnSelect property:
+5. 
      ```
      If(!IsBlank(Visit) 
      && Visit.Status = 'Status (Visits)'.Active
@@ -247,6 +237,8 @@ We would like to enable **Check Out** button when the visit record has been loca
 
 9. Press **ESC** to exit the running app.
 
+
+
 ## Task \#5: Complete Check In and Check Out Process
 
 To perform the check in and check out process we need to update Dataverse visit data as following:
@@ -255,9 +247,11 @@ To perform the check in and check out process we need to update Dataverse visit 
 * When visitor checks out, set *Actual End* field to the current date and time. 
 * After check out, set the record status to inactive, indicating that the visit has been completed
 
-1. Select **Check In** button.
+We are going to do this by pasting patch functions into the OnSelect properties of the Check In and Check Out buttons.
 
-2. Set **OnSelect** property on the Advanced tab to the following expression.
+1. Select the **Check In** button.
+
+2. Set **OnSelect** property on the Advanced tab (or in the dropdown) to the following expression.
 
    ```
    Patch(
@@ -320,7 +314,7 @@ To perform the check in and check out process we need to update Dataverse visit 
 
 ## Task \#6: Add visual indicators
 
-Usability of a mobile app significantly improves when visual indicators are provided. In this task, we will add an icon indicating if a visitor can be checked in or checked out.
+Usability of a mobile app significantly improves when visual indicators are provided. In this task, we will add an icon indicator.  Users will see a smile if visitors can be checked in or out, and a frown if not. 
 
 1. Select **Insert** tab
 
@@ -328,7 +322,7 @@ Usability of a mobile app significantly improves when visual indicators are prov
 
 3. Resize and place the icon to the left of the buttons
 
-4. In the Advanced tab for the Icon, select **Icon** property (in the Design section) and enter the following expression
+4. In the Advanced tab for the Icon, select **Icon** property (in the Design section), or select from the dropdown as before and enter the following expression
 
    ```
    If(
@@ -338,6 +332,7 @@ Usability of a mobile app significantly improves when visual indicators are prov
        Icon.EmojiSmile
    )
    ```
+You will see the frown emoji icon replace the icon you chose in step 2.
 
 5. To preserve work in progress, click **File** then click **Save**. Use the **Back** arrow to return to the app.
 
@@ -361,10 +356,10 @@ Your running app should look approximately like the following:
 
 3. Select **Publish this version**
 
-# Challenges
 
-* Avoid manual entry of the visit code
-* Add building validation for the visit
-* Add validation of the visit actual time vs visit scheduled time (too early, too late, etc)
-* Add detailed status of the visit, e.g. email display and validation for the visitor, reason for denying building access, etc
-* Multiple buildings/meetings/checkings during a single campus visit. For example, someone may visit campus for a day and during that day they will meet staff members in multiple buildings at different time of the day. Would you consider bringing *appointment* entity into the solution?
+
+
+# Further enhancements
+The canvas app format allows for flexible configuration.  For example, you could add a bar scanner for the visit bar or QR codes rather than manual entry.  To do this swap the input text box for the Barcode scanner (found in the Media dropdown).
+
+

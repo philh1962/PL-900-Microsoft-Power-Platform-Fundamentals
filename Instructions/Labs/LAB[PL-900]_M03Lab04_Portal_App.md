@@ -8,16 +8,11 @@ lab:
 
 ## Lab 4: How to build a Power Apps portal
 
-### Important Notice (Effective November 2020):
-Common Data Service has been renamed to Microsoft Dataverse. Some terminology in Microsoft Dataverse has been updated. For example, entity (now **table**), field (now **column**), and record (now **row**) may be out of date. Please keep this in mind as you work through the labs. We expect to have our content fully up to date very soon. 
-
-For more information and for a complete list of affected terms, please visit [What is Microsoft Dataverse?](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro#terminology-updates)
-
 # Scenario
 
 Bellows College is an educational organization with multiple buildings on campus. Campus visits are currently recorded in paper journals. The information is not captured consistently, and there are no means to collect and analyze data about the visits across the entire campus.
 
-Campus administration would like to provide the visitors with the information about the buildings on campus. The visitors will be able to view the buildings list on a website, which will be built using a Power Apps portal.
+Campus administration would like to provide the visitors with the information about the buildings on campus. The visitors will be able to view the buildings list on a website, which will be built using a Power Apps portal.  Portals are usually used for external users.
 
 In this lab, you will provision a Power Apps portal and create a portals webpage that will show a listing of the buildings on campus.
 
@@ -54,7 +49,7 @@ You will follow the below outline to design the Power Apps portal:
 
 5.  Click on the app name to open the portal
 
-    > You should be redirected to your portal website landing page with a welcome message. Navigate your portal to see what was created by default when you provisioned your portal. 
+    > You should be redirected to your portal website landing page with a welcome message. Navigate your portal to see what was created by default when you provisioned your portal. You will have two Services pages, an About us page and a search function.  
 
 ## Task \#2: Create a Webpage
 
@@ -76,7 +71,7 @@ You will follow the below outline to design the Power Apps portal:
 
     -   Mouse over **Fixed layouts** and choose **Page with title**
 
-3.  In the properties pane, under **Display** change the **Name** from **New page (1)** to `Building Directory`
+3.  In the properties pane, under **Display** change the **Name** from **New page (1)** to `Building Directory` (it may take a moment to appear)
 
 4.  In the **Partial URL** change the value to `building-directory`, press the Tab key (to initiate auto-save)
 
@@ -164,7 +159,7 @@ You will follow the below outline to design the Power Apps portal:
     
 4.  Click **Browse website** to view the page. 
 
-    > You should see the list of Buildings from your Dataverse database appear on the webpage.
+    > You will see an error message that you do not have the permissions to view these records.  Since portals are designed to allow external users to access Dataverse data, we need to set permissions for access.  Return to the portal editor, select the list component and go to **Manage table permissions**.  Give the permission a name (e.g. Building List),  select the **Building (bc_building)** table and choose **Global Access** as the Access type.  Click **Browse website** to view the page again, and the building list will now be visible.
 
 # Exercise \#2: Change the Portal Theme
 
@@ -186,7 +181,7 @@ You will follow the below outline to design the Power Apps portal:
     
     -   Click the toggle for **Enable basic theme** to turn this feature on.
     
-    -   On one of presets, click the ellipses (**...**) and choose **Customize**
+    -   On one of presets, click the ellipses (**...**) and choose **Customize**  The Dark yellow Preset is particularly lurid.
     
     -   A copy of the basic theme has been created. 
     
@@ -194,16 +189,13 @@ You will follow the below outline to design the Power Apps portal:
     
     -   Rename your theme
     
-3.  On the command bar, click **Sync configuration**
+3.  On the command bar, click **Sync configuration** and then **Browse website** to appreciate the new colour scheme.  Note that the theme is applied to all the pages of the site.
 
 Your app layout should look similar to the following structure:
 
 ![Example portal](media/9-portallabresult.jpg)
 
-# Challenges
+# Challenge
+Explore the **Portal Management** app.
 
-* Create a different view of Buildings that just displays the Building Name. You will need to select **Browse website** from the Portal studio to see the changes.
-* On the toolbelt, click on the **Themes** icon and edit the CSS of your custom theme.
-* Create a page with the **Form** component and modify a **List** component to add or edit Dataverse rows with the form.
-* Enable **Entity Permissions** in a **List** component **Settings**, what happens to the data?
-* In the Portal studio, select the Source Code Editor icon `</>` to view the page source. If you are comfortable with HTML, make some modifications and view the results.
+Up to now we have only made minor changes to a template portal, but there are many more capabilities and settings in the Portal Management app that is automatically deployed into your environment when you provision a portal.  You can access this by click **Settings > View more settings** in the your Portal editor, or by selecting it listed under Apps in the make.powerapps.com screen.
