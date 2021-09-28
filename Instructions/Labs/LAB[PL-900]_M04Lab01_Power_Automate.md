@@ -267,7 +267,7 @@ Your flow will begin sending emails to the email you specified if there are any 
    
    3. Actual Start has a value.
    
-   > **Note**: To view this data, navigate to make.powerapps.com in a new tab. Click Solutions on the left pane to locate your solution. Select the Visit entity, then select the Data tab. Click Active Visits in the top right-hand corner to display the view selector, then select All fields.
+   > **Note**: To view this data, navigate to make.powerapps.com in a new tab. Click Solutions on the left pane to locate your solution. Select the Visit entity, then select the Data tab. Click Active Visits in the top right-hand corner to display the view selector, then select Custom columns.
    
 2. Navigate to your **Security Sweep** flow, if not already there.
 
@@ -283,9 +283,21 @@ Your flow will begin sending emails to the email you specified if there are any 
 
 8. Select the back arrow to the Security Sweep flow details. Select **Turn off** on the command bar. This is to prevent flow from executing on a schedule on the test system.
 
+## Example:
+
+* This is the Active Visits view (therefore all visits shown are active)
+* Scott Konersmann's visit has a Scheduled End time more than 15 minutes in the past
+* The visit has an Acual Start time
+
+![Security sweep scheduled flow part 2b](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow7.png)
+
+As all conditions are met, this will trigger an email:
+
+![Security sweep scheduled flow part 2a](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow6.png)
+
 # Challenges
 
-* Add could you add Actual Start and Scheduled End to the email body.
+* How could you add Actual Start and Scheduled End to the email body?
 * How could you ensure user-friendly date formatting is used in the email body?
 * Is it possible to generate a table with overstay information and send only a single email?
 
