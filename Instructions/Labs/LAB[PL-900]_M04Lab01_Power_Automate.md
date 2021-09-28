@@ -252,11 +252,12 @@ The following have been identified as requirements you must implement to complet
 
    With all steps expanded, your flow should look approximately like the following:
 
-![Security sweep scheduled flow part 1](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow3.png)
-
+![Security sweep scheduled flow part 1a](https://github.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/blob/master/Instructions/Labs/media/revisions/flow4.png)
+![Security sweep scheduled flow part 1b](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow5.png)
+(
 ## Task #2: Validate and test the flow
 
-Your flow will begin sending you emails (to the email you specified when creating the John Doe contact previously) if there are visits that meet the requirements laid out in the flow.
+Your flow will begin sending emails to the email you specified if there are any visits that meet the requirements laid out in the flow.
 
 1. Validate that you have visit records that:
 
@@ -284,7 +285,7 @@ Your flow will begin sending you emails (to the email you specified when creatin
 
 # Challenges
 
-* Add Actual Start and Scheduled End to the email body.
+* Add could you add Actual Start and Scheduled End to the email body.
 * How could you ensure user-friendly date formatting is used in the email body?
 * Is it possible to generate a table with overstay information and send only a single email?
-* Can you generate barcode for the visit code? When will that be useful?
+
