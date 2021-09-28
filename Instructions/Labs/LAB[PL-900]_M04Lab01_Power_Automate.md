@@ -116,7 +116,7 @@ The following have been identified as requirements you must implement to complet
 
     Leave this flow tab open for the next task. You flow should look approximately like the following:
 
-![image](C:\Users\phili\Desktop\flow2)
+![image](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow2.png)
 
 ## Task \#2: Validate and test the flow
 
