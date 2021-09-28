@@ -43,7 +43,7 @@ The following have been identified as requirements you must implement to complet
 
 # Exercise \#1: Create Visit Notification flow
 
-**Objective:** In this exercise, you will create a Power Automate flow that implements the requirement. The visitor should be sent an email that includes the unique code assigned to the visit.
+**Objective:** In this exercise, you will create a Power Automate flow that implements the first requirement. The visitor should be sent an email that includes the unique code assigned to the visit.
 
 ## Task \#1: Create flow
 
@@ -140,11 +140,11 @@ The following have been identified as requirements you must implement to complet
 
 10.  Press the **Checkmark** icon to save the new visit
 
-11.  Navigate back to the previous tab with the flow being tested. Watch as the flow is run. If there are any errors, go back and compare your flow to the example above. If the email is sent successfully, you will receive it in your inbox. 
+11.  Navigate back to the previous tab with the flow being tested. Watch as the flow is run. If there are any errors, go back and compare your flow to the example above. If the email is sent successfully, you will receive it in your inbox (it may go into your Junk/Spam folder). 
 
 12.  Click the back arrow on the command bar
 
-13.  In the **Details** section, notice that the **Status** is set to **On**. This means your flow will run whenever a new Visit is created, until you turn it off. Any time the flow runs, you will see it added to the **28-day run history** list.
+13.  Your flow will run whenever a new Visit is created, until you turn it off. Any time the flow runs, you will see it added to the **28-day run history** list.
 
 14.  Turn the flow off by clicking **Turn off** on the command bar. You may need to press the ellipses (**...**) to see this option.
 
@@ -152,7 +152,7 @@ The following have been identified as requirements you must implement to complet
 
 # Exercise #2: Create Security Sweep flow
 
-**Objective:** In this exercise, you will create a Power Automate flow that implements the requirement. A security sweep needs to be performed every 15 minutes, and security should be notified if any of the visitors overstayed their scheduled time.
+**Objective:** In order to meet the second requirement,  in this exercise you will create a Power Automate flow that performs a security sweep every 15 minutes, and notifies security if any visitors overstay their scheduled time.
 
 ## Task #1: Create flow to retrieve records
 
