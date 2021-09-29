@@ -299,5 +299,5 @@ As all conditions are met, this will trigger an email:
 
 * How could you add Actual Start and Scheduled End to the email body?
 * How could you ensure user-friendly date formatting is used in the email body?
-* Is it possible to generate a table with overstay information and send only a single email?
+
 
