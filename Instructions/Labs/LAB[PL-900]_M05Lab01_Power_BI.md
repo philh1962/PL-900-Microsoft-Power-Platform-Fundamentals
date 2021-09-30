@@ -44,7 +44,7 @@ We will follow the below steps to design and create the Power BI dashboard:
 
 **Objective:** In this exercise, you will create a Power BI report based on data from your Dataverse database.
 
-## Task \#1: Install Power BI Desktop / Prepare Power BI service
+## Task \#1: Install Power BI Desktop / Prepare Power BI service and connect to your data
 
 1. Follow the below instructions to setup Power BI: 
 
@@ -61,7 +61,7 @@ We will follow the below steps to design and create the Power BI dashboard:
 
 3. If you successfully installed Power BI Desktop, you can now skip to [Task \#2](#task-2-prepare-data); otherwise, continue to the next step.
 
-    > If you do not have required permissions to install desktop applications or experience difficulties in running or configuring Power BI Desktop, complete the task steps below.
+    > If you do not have required permissions to install desktop applications or experience difficulties in running or configuring Power BI Desktop, complete the task steps below to run using local data and the web app.
 
 4. Download [visits.pbix](../../Allfiles/visits.pbix) and save on your computer.
 
