@@ -94,15 +94,15 @@ We will follow the below steps to design and create the Power BI dashboard:
     
     * In the left navigation page, select Environments, and then click on your Practice environment.
     
-    * Right mouse click **Environment URL** on the **Details** panel, then select **Copy link address**.
+    * Right mouse click **Environment URL** on the **Details** panel, then copy the text.  Do not select **Copy link address**, see step 5).
     
 2. Open Power BI Desktop, sign in with your provided credentials if prompted.
 
 3. Select **Get data**.
 
-4. Select **Power Platform** on the left, then select **Common Data Service (Legacy)**, and press **Connect**.
+4. Select **Power Platform** on the left, then select **Dataverse**, and press **Connect**.
 
-5. Paste the environment URL you copied earlier into the **Server URL** field, press **OK**.
+5. Paste the environment URL you copied earlier into the **Server URL** field, press **OK**.  For Dataverse to connect it is important that the link does not start with https:// or finish with a / .  (*eg orge39b691b.crm.dynamics.com **not** https://orge39b691b.crm.dynamics.com/)
 
 6. Expand **Entities** node, search for bc and select **bc_Building** and **bc_Visit** entities, click **Load**.
 
