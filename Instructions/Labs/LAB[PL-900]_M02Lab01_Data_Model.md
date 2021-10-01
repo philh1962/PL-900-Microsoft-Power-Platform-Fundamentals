@@ -70,7 +70,7 @@ You will then run a Power Automate flow that populates your tables with test bui
 
     -   Navigate to <https://make.powerapps.com>. You may need to reauthenticate - click **Sign in** and follow instructions if needed.
 
-    -   Select your environment by clicking on **Environment** on the upper right corner of the screen and choosing your environment from the drop-down menu.
+    -   Select your environment by clicking on **Environment** on the upper right corner of the screen and choosing your Sales Trial environment from the drop-down menu.
 
     -   Select **Solutions** from the left menu and click **New Solution**.
 
@@ -86,7 +86,7 @@ You will then run a Power Automate flow that populates your tables with test bui
     
     -   Enter **bc** for **Prefix**
 
-    -   Click **Save and Close**
+    -   Click **Save**
     
     -   Click **Done** in the pop-up window.
 
@@ -95,7 +95,7 @@ You will then run a Power Automate flow that populates your tables with test bui
     -   Now, click on the **Publisher** dropdown and select the **Bellows College**
         publisher you just created.
 
-    -   Validate that **Version** is set to **1.0.0.0** 
+    -   Validate that **Version** is automatically set to **1.0.0.0**
     
     -   Click **Create**.
 
@@ -105,7 +105,7 @@ You will then run a Power Automate flow that populates your tables with test bui
 
 ## Task \#1: Add Existing Table
 
-1.  Click to open your **Campus Management** solution you just created.
+1.  Click to open your **Campus Management** solution you just created.  Currently it has no contents.
 
 2.  Click **Add Existing** and select **Table**.
 
@@ -127,28 +127,28 @@ You will then run a Power Automate flow that populates your tables with test bui
     > You should have **1 View** and **1 Form** selected. 
     
 10.  Click **Add** again. This will add the Contact table with the selected View and Form to the newly created solution. 
-Your solution should now have one table: Contact.
+Your solution should now have one table: Contact.  Click on the table name, and then the Form and View tabs to verify that they have been added to the solution.
 
 ## Task #2: Create Building Table
 
 1.  Use the breadcumbs to go open your Campus Management. If you have signed out, open the Campus Management solution by following these steps:
 
-    * Sign in to <https://make.powerapps.com> (if you are not already signed in)
+    * Sign in to <https://make.powerapps.com> (if you are not already signed in).
     
     * Select **Solutions** and click to open the **[Your Last Name] Campus Management**
-          solution you just created.
+          solution you just created (if you are not already signed in).
           
 2.  Create Building table
 
     -   Click **New** and select **Table**.
     
-    -   Enter **Building** for **Display Name** 
+    -   Enter **Building** for **Display Name** note that the plural display name is automatically populated.
     
     -   Click **Create**. This will start provisioning the table in background while you can start adding other tables and columns.
 
 ## Task #3: Create Visit Table and Columns
 
-The **Visit** table will contain information about the campus visits including the building, visitor, scheduled and actual time of each visit. 
+The **Visit** table will contain information about the campus visits including the building, visitor, scheduled and actual time of each visit. We will add the necessary columns (formerly fields) to the table.
 
 We would like to assign each visit a unique number that can be easily entered and interpreted by a visitor when asked during the visit check-in process.
 
@@ -162,7 +162,7 @@ We would like to assign each visit a unique number that can be easily entered an
    
    * Enter **Visit** for **Display Name** 
    
-   * Click **Create**. This will start provisioning the table in background while you can start adding other columns.
+   * Click **Create**. This will start provisioning the table in background while you can start adding other columns.  You will see a list of Standard columns that are added by default.
 
 3. Create Scheduled Start column
 
@@ -182,7 +182,7 @@ We would like to assign each visit a unique number that can be easily entered an
 
 4.  Create Scheduled End column
 
-    * ith the Visit table open, click **Add column**, as before.
+    * with the Visit table open, click **Add column**, as before.
     
     * Enter **Scheduled End** for **Display Name**, as before.
     
@@ -210,7 +210,7 @@ We would like to assign each visit a unique number that can be easily entered an
     
     * In **Behavior**, select **Time zone independent**.
     
-    * Click **Done**.  The new column will be added to the list in bold, as the Visit table has not been saved. If you scroll down you will see the other two new columns, also in bold if you have not saved the table. 
+    * Click **Done**.  The new columns will be added to the list in bold, as the Visit table has not been saved. If you scroll down you will see the other two new columns, also in bold if you have not saved the table. 
     
 6.  Create Actual End column
 
@@ -240,37 +240,47 @@ We would like to assign each visit a unique number that can be easily entered an
     
     * Click **Done**.
     
-8.  You will now have five new columns in the columns list.  The unsaved ones will be bold.  Click **Save Table**.
+8.  You will now have five new columns in the columns list.  Unsaved columns will be bold.  Click **Save Table**.
+
 
 # Exercise \#3: Create Relationships
 
-**Objective:** In this exercise, you will add relationships between the tables.
+**Objective:** In this exercise, you will add relationships between the tables.  This enables a table to look to another table for data - for example, to add a Building name value from the Building table to a the Visit table.  This can be done by adding a lookup column in a table (which automatically adds a relationship), or directly in the Relationships tab (which automatically adds a lookup column).  In this example we will add lookup columns and confirm the new relationships in the tab. 
 
 ## Task #1: Create Relationships
 
 1.  Ensure that you are still viewing the **Visit** table of your **Campus Management** solution. If not, navigate there.
 
-2.  Create Visit to Contact relationship
+2.  Create Visitor lookup column
 
-    * Select the **Relationships** tab.
-    
-    * Click **Add Relationship** and select **Many-to-one**
-    
-    * Select **Contact** for **Related (One)** 
-    
+    * Click **Add column**
+
     * Enter **Visitor** for **Lookup column display name** 
-    
-    * Click **Done**.  As before, unsaved relationships will appear in bold in the list.
-    
-3.  Create Visit to Building relationship
 
-    * Click **Add Relationship** and select **Many-to-one**
-    
-    * Select **Building** for **Related (One)** 
-    
-    * Click **Done**.
-    
-4.  Click **Save Table**.
+    * For **Data type** select **Lookup**
+
+    * For **Related table** select **Contact**
+
+    * Cick **Done**
+
+3.   Create Building lookup column   
+
+    * Click **Add column**
+
+    * Enter **Building** for **Lookup column display name** 
+
+    * For **Data type** select **Lookup**
+
+    * For **Related table** select **Building**
+
+    * Cick **Done**
+
+
+As before, the new columns will show as bold until the table is saved.
+
+4.  Click **Save Table**
+
+5.  Select the **Relationships** tab and confirm that the new Visitor and Building relationships have been set up.  You can see that these are Many-to-one relationships - ie one building or one visitor can have many visits.  (You can click on building or contact in the related table to see that the relationship is One-to-many from the related table).
 
 5.  Select **Solutions** from the top breadcrumb menu and click **Publish all customizations.**
 
@@ -286,7 +296,7 @@ In this task you will import a solution that contains the Power Automate flow re
 
 2. Sign in to <https://make.powerapps.com>.
 
-3. Select your **[my initials] Practice** environment at the top right, if it is not already selected.
+3. Select your **[my initials] Sales Trial** environment at the top right, if it is not already selected.
 
 4. Select **Solutions** in the left navigation panel.
 
@@ -341,7 +351,7 @@ In this section we will run a Power Automate flow to generate visit data for the
 
 2. Click to open the **Visit** table, then select the **Data** tab.  If the import was successful, this will show the data we just imported.  This is a useful way to see and edit data when building apps, without having to go through the screens a user would see.  
 
-3. Click **Active Visits** in the top right-hand corner to display the view selector, then select **Custom columns**. This will change the view that is being used to display the Visit data. You can see from this that simulated contacts, buildings and visits.
+3. Click **Active Visits** in the top right-hand corner to display the view selector, then select **Custom columns**. This will change the view that is being used to display the Visit data. You can see from this that simulated contacts, buildings and visits have been added.
 
     > If you do not see **Active Visits** due to smaller resolution, you should see an eye icon in the same location.
 
