@@ -51,7 +51,7 @@ Both will be integrated to the model-driven app for a better user-experience.
 
 1.  Sign in to <https://make.powerapps.com> if you are not already signed in.
 
-2.  Select your **environment.**
+2.  Select your Sales Trial environment.
 
 3.  Select **Solutions**.
 
@@ -143,11 +143,9 @@ Now, we will clone the view to create a new view for today's visits.
 
 ## Task \#1: Create Application
 
-1.  Open your Campus Management solution if you are not already in it.
+1.  -   Sign in to <https://make.powerapps.com>
 
-    -   Sign in to <https://make.powerapps.com>
-
-    -   While in your environment, click to open your **Campus Management**
+    -   While in Sales Trial environment, click to open your **Campus Management**
         solution.
     
 2.  Create the Model-Driven Application
@@ -224,7 +222,7 @@ Now, we will clone the view to create a new view for today's visits.
 
 12.  Click **Validate** to validate the changes done in the application. 
 
-    >  This will show some warnings but we can ignore them, since we have not referenced a specific View and Form for the entities and the users will have access to all the Views and Forms for **Visit** and **Building** entities.
+    This will show some warnings but we can ignore them, since we have not referenced a specific View and Form for the entities and the users will have access to all the Views and Forms for **Visit** and **Building** entities.
      
 13. Click **Publish**
 
@@ -242,7 +240,7 @@ Now, we will clone the view to create a new view for today's visits.
 
     -   Select **Apps** and click on your **Campus Management** app. (If you don't see your app at first, you may need to refresh your browser.)
 
-    -   The application should open in a new window.
+    -   The application should open in a browser tab.
     
 2.  Create new Contact
 
@@ -299,7 +297,7 @@ Now, we will clone the view to create a new view for today's visits.
 
 # Challenges
 
-* Select specific views and forms for Visits and Buildings
+* How could you select specific views and forms for Visits and Buildings
 * Security personnel typically work in a single building. How would you provide an easy way for them to display visits only for a selected building?
-* Restrict access to specific entities, e.g. Buildings should be read-only for all staff members except the administrators
+* How do you restrict access to specific entities, e.g. Buildings should be read-only for all staff members except the administrators?
 

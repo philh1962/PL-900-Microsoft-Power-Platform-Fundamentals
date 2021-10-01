@@ -45,7 +45,7 @@ You will follow the below outline to design the canvas app:
 
     -   Sign in to <https://make.powerapps.com>
 
-    -   If the Environment displayed in the top right is not your Practice environment, select your **Environment**. 
+    -   If the Environment displayed in the top right is not your Sales Trial environment, select it. 
 
     -   Select **Solutions**.
 
@@ -86,7 +86,7 @@ You will follow the below outline to design the canvas app:
     
     -   Select **Screen1**.
     
-    -   Go to the **Insert** tab.
+    -   With Screen1 selected, go to the **Insert** tab.
     
     -   Click **Text** and select **Text input**.
     
@@ -115,7 +115,7 @@ You will follow the below outline to design the canvas app:
    
     -   Press **Add**
    
-    -   (You change the order of the selected fields by dragging the field cards in the list, but it is easier to add them in the chosen order to begin with you can collapse the fields to make them easier to drag).
+    -   (You change the order of the selected fields by dragging the field cards in the list, but it is easier to add them in the chosen order to begin with.  You can collapse the fields to make them easier to drag).
    
     -   Click the **X** to close the Fields pane
     
@@ -127,7 +127,7 @@ You will follow the below outline to design the canvas app:
 
 7.  Prepare to test the app using some data from the Visit table
 
-    -   Open a new browser window in your Practice environment.
+    -   Open a new maker portal window in your Sales Trial environment.
     
     -   In this window, open the **Dataverse** tab and select **Tables**
 
@@ -154,7 +154,7 @@ You will follow the below outline to design the canvas app:
 
 ## Task \#3: Add Check In and Check Out Buttons
 
-In this task, we will create buttons for the user to check in and check out of their Visit. 
+In this task, we will create buttons for the user to check visitors in and out of their Visit. 
 
 1. Save search results in a variable to reuse across the control
 
@@ -314,7 +314,7 @@ We are going to do this by pasting patch functions into the OnSelect properties 
 
 ## Task \#6: Add visual indicators
 
-Usability of a mobile app significantly improves when visual indicators are provided. In this task, we will add an icon indicator.  Users will see a smile if visitors can be checked in or out, and a frown if not. 
+Usability of a mobile app significantly improves when visual indicators are provided. In this task, we will add an icon indicator.  Users will see a smile if visitors can be checked out, and a frown if not. 
 
 1. Select **Insert** tab
 

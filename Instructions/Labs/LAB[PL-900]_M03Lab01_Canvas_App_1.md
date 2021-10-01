@@ -44,8 +44,7 @@ In this task, you will create a canvas app using the phone layout template based
 
     -   Sign in to <https://make.powerapps.com>
 
-    -   Select your **environment** at the top right if it is not already set to
-        your Practice environment.
+    -   Select your **Sales Trial** environment at the top right if it is not already set.
 
     -   Select **+ Create** Note that apps and portals can be started from blank, from data, or from templates.  
 
@@ -69,7 +68,7 @@ In this task, you will create a canvas app using the phone layout template based
 
     -   Click **File \> Save**.
 
-    -   Press **Save**.   Your new app (called App) will now be visible in the Apps section of the Power Apps maker portal, along with the Bellows College Portal and the Portal Management app that is supplied with it.
+    -   Press **Save**.   Your new app (called App unless you give it a different name) will now be visible in the Apps section of the Power Apps maker portal, along with the Bellows College Portal and the Portal Management app that is supplied with it.
 
 ## Task \#2: Configure Visits Detail Form
 
@@ -138,7 +137,8 @@ In this task, you will configure a form to edit information about individual vis
 7.  Click **Add**
 
 8.  You can rearrange fields in the **Fields** pane by dragging and dropping field names up or down, but if you selected them in the order of above they will be ordered correctly.
-9.    Recommended order is:
+
+Recommended order is:
     
     * Name, Building, Visitor, Scheduled Start, Scheduled End
     >**Tip:** You can collapse each field by clicking the down arrow beside the field name. 
@@ -197,7 +197,8 @@ Because number of visits continuously grows, users need a feature to filter the 
 
 8. Locate the **Items** property and click in the text box.
 
-9. In the expression, locate **[@Visits]** and replace it with `Filter(Visits,'Scheduled End' >= DatePicker1.SelectedDate)`. The full expression should look like the following.  (YOu may find it easier to cut-and-paste the whole expression).
+9. In the expression, locate **[@Visits]** and replace it with `Filter(Visits,'Scheduled End' >= DatePicker1.SelectedDate)`. The full expression should look like the following.  (You may find it easier to cut-and-paste the whole expression).
+(This is filtering the view by visits with a scheduled end later than the date in the date picker)
 
    ```
    SortByColumns(
@@ -236,9 +237,9 @@ In this exercise you will test the application and, once successful, you will ad
     
     -   Select a visit and verify that display form is working properly by selecting the **>** symbol to view item details.
     
-    -   Return to the gallery and press **+** to create a new visit. Verify that edit form contains required columns including visitor, building, and scheduled start and end dates.
+    -   Return to the gallery and press **+** in the top right corner to create a new visit. Verify that edit form contains required columns including visitor, building, and scheduled start and end dates.
     
-    -   Fill in the information and submit. Verify that the new record appears in the gallery.  You may need to scroll down or resort the gallery to see new records.
+    -   Fill in the information and submit. Verify that the new record appears in the gallery.  You may need to scroll down, search or resort the gallery to see new records.
     
     -   Create and verify at least 2 more visits.
     
@@ -254,20 +255,18 @@ In this exercise you will test the application and, once successful, you will ad
 
     -   Click the **Back** arrow to navigate back to the app.
 
-    -   Close the **Designer** browser window or tab.
+    -   Close the **Designer** tab.
 
-    -   Click **Leave** if prompted when tried to close the browser window.
-    
     -   After publishing, when you select your new App in the list in the Power Apps maker portal, the new version will run.  Previously, new versions could only by accessed by selecting edit and previewing. 
 
 ## Task #2: Add App to Solution and publish
-We have created out app outside the our Campus Management Solution.  Adding the App to the solution and publishing all customizations will allow us to deploy the latest versions of all the necessary components. 
+We have created our app outside the our Campus Management Solution.  Adding the App to the solution and publishing all customizations will allow us to deploy the latest versions of all the necessary components. 
 
 1. Open the Campus Management solution.
 
    * Sign in to <https://make.powerapps.com>  if you are not already logged in.
    
-   * If the Environment displayed in the top right is not your Practice environment, select your **Environment**. 
+   * If the Environment displayed in the top right is not your Sales Trial environment, select your **Environment**. 
    
    * Select **Solutions**.
    
@@ -285,7 +284,7 @@ We have created out app outside the our Campus Management Solution.  Adding the 
 
 # Extension
 
-* You can **set a begin and end date range** by adding another date picker input, and adding to the gallery filter
+* You can set a begin and end date range by adding another date picker input, and adding to the gallery filter items
 
 SortByColumns(Search(Filter(Visits, 'Scheduled Start' >= DatePicker1.SelectedDate,'Scheduled End' <= DatePicker2.SelectedDate), TextSearchBox1.Text, "bc_code","bc_name"), "bc_code", If(SortDescending1, Descending, Ascending))
 
