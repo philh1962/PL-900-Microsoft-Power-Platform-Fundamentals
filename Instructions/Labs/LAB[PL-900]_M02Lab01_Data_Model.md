@@ -50,14 +50,13 @@ You will then run a Power Automate flow that populates your tables with test bui
 
 
 
-
 ## Prerequisites:
 
 * Completion of **Module 0 Lab 0 - Validate lab environment**
 
 ## Things to consider before you begin:
 
-* Naming convention
+* Naming conventions
 
 * Data types, restrictions (e.g. max length of a name)
 
@@ -128,8 +127,7 @@ You will then run a Power Automate flow that populates your tables with test bui
     > You should have **1 View** and **1 Form** selected. 
     
 10.  Click **Add** again. This will add the Contact table with the selected View and Form to the newly created solution. 
-    
-    > Your solution should now have one table: Contact.
+Your solution should now have one table: Contact.
 
 ## Task #2: Create Building Table
 
