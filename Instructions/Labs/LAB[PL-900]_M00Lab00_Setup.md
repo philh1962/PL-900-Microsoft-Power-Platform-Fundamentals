@@ -10,7 +10,7 @@ Module 0: Course introduction
 ## Lab: Validate lab environment
 
 ### Important Notice (Effective November 2020):
-Common Data Service has been renamed to Microsoft Dataverse. Most terminology in Microsoft Dataverse has been updated. For example, entity (now **table**), field (now **column**), and record (now **row**) may be out of date. Please keep this in mind as you work through the labs. We expect to have our content fully up to date very soon. 
+Common Data Service has been renamed to Microsoft Dataverse. Most terminology in Microsoft Dataverse has been updated. For example, entity (now **table**), field (now **column**), and record (now **row**) may be out of date. It may help new users to think in terms of "entity tables"  "field columns" and "record rows." Please keep this in mind as you work through the labs. Microsoft content is expected to be fully up to date very soon. 
 
 For more information and for a complete list of affected terms, please visit [What is Microsoft Dataverse?](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro#terminology-updates)
 
@@ -23,7 +23,7 @@ Campus administration would like to modernize their visitor registration system 
 
 Throughout this course, you will build applications and perform automation to enable the Bellows College administration and security personnel to manage and control access to the buildings on campus.
 
-In this Module 0 lab, you will acquire a Power Platform trial tenant and access the Power Platform admin center. In the admin center, you will then create your **Practice** environment that you will do the majority of your lab work in.
+In this Module 0 lab, you will access the Power Platform admin center and create your **Practice** environment that you will do the majority of your lab work in.
 
 ## Exercise 1 – Setup
 
