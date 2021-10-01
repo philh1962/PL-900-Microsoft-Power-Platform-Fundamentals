@@ -23,39 +23,19 @@ Campus administration would like to modernize their visitor registration system 
 
 Throughout this course, you will build applications and perform automation to enable the Bellows College administration and security personnel to manage and control access to the buildings on campus.
 
-In this Module 0 lab, you will access the Power Platform admin center and create your **Practice** environment that you will do the majority of your lab work in.
+In this lab, you set up a Portal that we will use in future labs.  
 
-## Exercise 1 – Setup
+    > This provisioning can run in the background, but can take up to an hour.
 
-### Task \#1 – Create environment
-
-1.  Access <https://admin.powerplatform.microsoft.com> and log in with your Microsoft 365 credentials if prompted again.
-
-2. Select **Environments** and click **+New.**
-
-    - For **Name**, enter **[My Initials] Practice.** (Example: AJ Practice.)
-    
-    - For **Type**, select **Trial** (do not select the Trial (subscription-based) option).
-    
-    - Change the toggle on **Create a database for this environment?** to **Yes.**
-    
-    - Leave all other selections as default and click **Next.**
-    
-    - On the next tab, leave all selections to default and click **Save.**
-
-3. Your **Practice** environment should now show in the list of Environments. 
-
-    > Your environment may take a few minutes to provision. Refresh the page if needed.
-
-# Exercise \#2: Provision a Power Apps portal
+# Exercise \#1: Provision a Power Apps portal
 
 **Objective:** Provisioning a Power Apps portal can take some time. In this exercise, you will create your Power Apps portal in your environment so that the provisioning process can be initiated. You will use this portal in a later lab.
 
 ## Task \#1: Create Power Apps portal
 
-1.  Sign in to <https://make.powerapps.com>
+1.  Sign in to <https://make.powerapps.com>  This opens the Power Apps maker portal.  
 
-2.  If the **Environment** displayed in the top right is not your Practice environment, click to select your Environment.
+2.  If the **Environment** displayed in the top right is not your **Sales Trial** environment, click to select this environment.
 
 3.  On the Home page, click on the **Create** then **Portal from blank** panel
 
