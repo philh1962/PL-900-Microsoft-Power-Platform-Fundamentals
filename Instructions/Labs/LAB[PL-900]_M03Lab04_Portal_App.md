@@ -31,7 +31,7 @@ You will follow the below outline to design the Power Apps portal:
 
 # Exercise \#1: Create a Portal Webpage
 
-**Objective:** In this exercise, you will create a new webpage that will display some static content as well as a list of buildings from Dataverse.  We will use the Portals editor, which is similar to other website editors such as WordPress.
+**Objective:** In this exercise, you will create a new webpage that will display some static content as well as a list of buildings from Dataverse.  We will use the Portals Studio, which is similar to other website editors such as WordPress.
 
 ## Task \#1: Navigate to Portal
 
@@ -59,15 +59,16 @@ You will follow the below outline to design the Power Apps portal:
 
     -   Click on the ellipses (**...**) to the right of the portals app name and choose **Edit**
 
-    > You are now in the Power Apps portals Studio. This is where you can modify and create portal content.
+    > You are now in the Power Apps Portals Studio, where you can modify and create portal content.
 
 2.  Create a new page
+Here we will add a new page to the Table of contents menu so that it can easily be accessed from the home page.
 
-    -   From the command bar on the left, select **New page**
+    -   From the command bar on the left, select the page icon **Pages and navigation**
 
-    -   Mouse over **Fixed layouts** and choose **Page**
+    -   Highlight **Table of Conents**, click the **...** elipsis and choose **Add a child page**
 
-3.  In the properties pane, under **Display** change the **Name** from **New page (1)** to `Building Directory` (it may take a moment to appear)
+3.  On the new page, in the properties pane, under **Display** change the **Name** from **New page (1)** to `Building Directory` (it may take a moment to appear)
 
 4.  In the **Partial URL** change the value to `building-directory`, press the Tab key (to initiate auto-save)
 
