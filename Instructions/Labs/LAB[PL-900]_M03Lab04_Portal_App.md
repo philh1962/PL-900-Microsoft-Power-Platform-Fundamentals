@@ -199,4 +199,4 @@ Your app layout should look similar to the following structure:
 # Challenge
 Explore the **Portal Management** app.
 
-Up to now we have only made minor changes to a template portal, but there are many more capabilities and settings in the Portal Management app that is automatically deployed into your environment when you provision a portal.  You can access this by click **Settings > View more settings** in the your Portal editor, or by selecting it listed under Apps in the make.powerapps.com screen.
+Up to now we have only made minor changes to a template portal, but there are many more capabilities and settings in the Portal Management app that is automatically deployed into your environment when you provision a portal.  You can access this by click **Settings > View more settings** in your Portal editor, or by selecting it listed under Apps in the make.powerapps.com screen.
