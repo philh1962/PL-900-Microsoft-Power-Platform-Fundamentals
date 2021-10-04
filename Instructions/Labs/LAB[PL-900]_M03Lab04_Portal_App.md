@@ -1,9 +1,5 @@
----
-lab:
-    title: 'Lab 5: How to build a Power Apps portal'
-    module: 'Module 3: Get started with Power Apps'
----
 
+---
 # Module 3: Get started with Power Apps
 
 ## Lab 4: How to build a Power Apps portal
@@ -35,17 +31,17 @@ You will follow the below outline to design the Power Apps portal:
 
 # Exercise \#1: Create a Portal Webpage
 
-**Objective:** In this exercise, you will create a new webpage that will display some static content as well as a list of buildings from Dataverse.
+**Objective:** In this exercise, you will create a new webpage that will display some static content as well as a list of buildings from Dataverse.  We will use the Portals editor, which is similar to other website editors such as WordPress.
 
 ## Task \#1: Navigate to Portal
 
 1.  Navigate to <https://make.powerapps.com>.
 
-2.  Verify that you are in your Practice Environment. If you are not, change the environment at the top right.
+2.  Verify that you are in your Sales Trial Environment. If you are not, change the environment at the top right.
 
 3.  Click on **Apps**
 
-4.  Locate the app that has the **Type** of **Portal**
+4.  Locate your **Bellows College Visitors** app that has the **Type** of **Portal**
 
 5.  Click on the app name to open the portal
 
@@ -67,9 +63,9 @@ You will follow the below outline to design the Power Apps portal:
 
 2.  Create a new page
 
-    -   From the command bar, select **New page**
+    -   From the command bar on the left, select **New page**
 
-    -   Mouse over **Fixed layouts** and choose **Page with title**
+    -   Mouse over **Fixed layouts** and choose **Page**
 
 3.  In the properties pane, under **Display** change the **Name** from **New page (1)** to `Building Directory` (it may take a moment to appear)
 
@@ -78,6 +74,7 @@ You will follow the below outline to design the Power Apps portal:
     > The title of the page should now read **Building Directory**
     
 ## Task \#3: Add Static Content
+In this exercise we are adding some static text and an image to the new page.
 
 1.  Add a section to the webpage
 
@@ -97,7 +94,7 @@ You will follow the below outline to design the Power Apps portal:
 
     -   In the new text area, enter the following text:
           ```
-          The following is the building directory.
+          This is our building directory:
           ```
     -   Select the text box above the one you just edited, and click **Delete** on the command bar to remove the default text.
 
@@ -109,15 +106,16 @@ You will follow the below outline to design the Power Apps portal:
 
     -   Choose **Image** from the **Portal components** area
 
-    -   In the properties pane, click **Select an image**. Locate and select the **Product A.png**
+    -   In the properties pane, click **Select an image**. Locate and choose any **searchhero.png**
     
     -   In the properties pane, click the **Formatting** section drop-down and change the **Width** to 70% (be sure to type the %). You can play around with the sizing of the image until it is as desired.
 
-4.  Click **Browse website** to view the page so far.  Notice that there is now the **Building Directory** option on the main menu.
+4.  Click **Browse website** to view the page so far.  
 
     > You may need to configure your browser to allow pop-ups.
 
 ## Task \#4: Add a List Component
+In this exercise we are adding a dynamic list of content from the Dataverse table, using the Portals security tools.
 
 1.  Navigate to the previous tab and continue to step #2. If not available, follow the below steps to return to this location.
 
@@ -159,11 +157,13 @@ You will follow the below outline to design the Power Apps portal:
     
 4.  Click **Browse website** to view the page. 
 
-    > You will see an error message that you do not have the permissions to view these records.  Since portals are designed to allow external users to access Dataverse data, we need to set permissions for access.  Return to the portal editor, select the list component and go to **Manage table permissions**.  Give the permission a name (e.g. Building List),  select the **Building (bc_building)** table and choose **Global Access** as the Access type.  Click **Browse website** to view the page again, and the building list will now be visible.
+    > You will see an error message that you do not have the permissions to view these records.  Since portals are designed to allow external users to access Dataverse data, we need to set permissions for access.  Return to the portal editor, select the list component and go to **Manage table permissions**.  Choose **New permisson**,  give the permission a name (e.g. Building List),  select the **Building (bc_building)** table and choose **Global Access** as the Access type.  Set the Privileges to Read, and after clicking **+ Add roles**, select **Anonymous Users**. Click **Browse website** to view the page again, and the building list will now be visible in your new page.  This will give you an idea of the granularity of the security setup in portals.
+
+5.  Note that because the Active Buildings view contains the Created On column, these dates are visible on the portal page.
 
 # Exercise \#2: Change the Portal Theme
 
-**Objective:** In this exercise, you will create a new theme that will alter the color scheme of your portal. 
+In this exercise, you will create a new theme that will alter the color scheme of your portal. 
 
 ## Task #1: Apply and Edit a Theme
 
