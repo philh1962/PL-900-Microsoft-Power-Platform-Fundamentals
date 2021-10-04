@@ -51,25 +51,25 @@ The following have been identified as requirements you must implement to complet
 
     -   Sign in to <https://make.powerapps.com>
 
-    -   Select your **environment.**
+    -   Select your **Sales Trial environment.**
 
     -   Select **Solutions**.
 
     -   Click to open your **Campus Management** solution.
 
-2.  Click **New** and select **Cloud flow**. This will open the Power Automate flow editor in a new window.
+2.  Click **New** and select **Cloud flow**. This will open the Power Automate flow editor in a new window.  (If you are using the Solution preview option, you will need to select **New > Automation > Cloud flow > Automated** Give it the flow name of Visit notification, and choose the trigger below).
 
 3. Select for **Microsoft Dataverse**.
 
 4. Select the trigger **When a row is Created, Updated or Deleted**.
 
-   * Select **Create** for **Change type**
+   * Select **Added** for **Change type**
    
    * Select **Visits** for **Table name**
    
    * Select **Organization** for **Scope**
    
-   * On the trigger step, click the ellipsis (**...**) and click **Rename**. Rename this trigger **"When a visit is created"**. This is a good practice, so you and other flow editors can understand the purpose of the step without having to dive into the details.
+   * On the trigger step, click the ellipsis (**...**) and click **Rename**. Rename this trigger **"When a visit is created"**. This is good practice, so you and other flow editors can understand the purpose of the step without having to dive into the details.
 
 5. Select **New Step**. This step is required to retrieve visitors information, including email address.
 
@@ -81,7 +81,7 @@ The following have been identified as requirements you must implement to complet
    
    * In the **Row ID** field, select **Visitor (Value)** from the Dynamic content list.
    
-   * On this action, click the ellipsis (**...**) and click **Rename**. Rename this action **"Get the Visitor"**. This is a good practice, so you and other flow editors can understand the purpose of the step without having to dive into the details, as before.
+   * On this action, click the ellipsis (**...**) and click **Rename**. Rename this action **"Get the Visitor"**. This is still good practice, so you and other flow editors can understand the purpose of the step without having to dive into the details, as before.
 
 8. Click **New Step**. This is the step that will create and send email to the visitor.
 
@@ -119,8 +119,9 @@ The following have been identified as requirements you must implement to complet
 ![image](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow2.png)
 
 ## Task \#2: Validate and test the flow
+Here will will add a new visit using the Campust Staff app and test our flow.
 
-1.  Open a new tab in your browser and navigate to <https://make.powerapps.com>
+1.  Open a new tab in your browser and navigate to <https://make.powerapps.com> in your Sales Trial environment
 
 2.  Click **Apps** and select the **Campus Staff** app you created
 
