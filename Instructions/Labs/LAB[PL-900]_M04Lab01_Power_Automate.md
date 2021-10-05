@@ -119,7 +119,7 @@ The following have been identified as requirements you must implement to complet
 ![image](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow2.png)
 
 ## Task \#2: Validate and test the flow
-Here will will add a new visit using the Campust Staff app and test our flow.
+Here will will add a new visit using the Campus Staff app and test our flow.
 
 1.  Open a new tab in your browser and navigate to <https://make.powerapps.com> in your Sales Trial environment
 
@@ -135,13 +135,19 @@ Here will will add a new visit using the Campust Staff app and test our flow.
 
 7.  Enter **John Doe** as **Name** and choose any **Building**
 
-8.  Choose **John Doe** as the **Visitor**
+8.  Choose **John Doe** as the **Visitor** (this will ensure the email goes to your address, as we used it in Lab 3).
 
 9.  Choose the **Scheduled Start** and **Scheduled End Dates** to any dates in the future.
 
 10.  Press the **Checkmark** icon to save the new visit
 
 11.  Navigate back to the previous tab with the flow being tested. Watch as the flow is run. If there are any errors, go back and compare your flow to the example above. If the email is sent successfully, you will receive it in your inbox (it may go into your Junk/Spam folder). 
+
+**Where's my email?** You may find that the email does not arrive - this may be due to security settings in Trial accounts preventing outgoing email.  Open a new tab in your browser and go to **portal.office.com** and select the Outlook icon.  Click on **Sent items**.  You will see the outgoing emails have been rejected by the recipient's email provider.  This is a feature of working in trials, but note that the flow was activated when the record was added, the and the email was composed and set out, just not received:
+
+![Email sent](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow8%20(1).png)
+
+Close the outlook tab.
 
 12.  Click the back arrow on the command bar
 
@@ -234,7 +240,7 @@ Here will will add a new visit using the Campust Staff app and test our flow.
 13.  Enter the following in the **Subject** field. **Name** is dynamic content from the **Get building** step.
 
    ```
-   There is an overstay in building {Name}.
+   There is an overstay in {Name}.
    ```
    
 14.  Enter the following in the **Body** field. **Full Name** is dynamic content from **Get visitor** step.
@@ -255,7 +261,9 @@ Here will will add a new visit using the Campust Staff app and test our flow.
 
 ![Security sweep scheduled flow part 1a](https://github.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/blob/master/Instructions/Labs/media/revisions/flow4.png)
 ![Security sweep scheduled flow part 1b](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow5.png)
-(
+
+
+
 ## Task #2: Validate and test the flow
 
 Your flow will begin sending emails to the email you specified if there are any visits that meet the requirements laid out in the flow.
@@ -268,7 +276,7 @@ Your flow will begin sending emails to the email you specified if there are any 
    
    3. Actual Start has a value.
    
-   > **Note**: To view this data, navigate to make.powerapps.com in a new tab. Click Solutions on the left pane to locate your solution. Select the Visit entity, then select the Data tab. Click Active Visits in the top right-hand corner to display the view selector, then select Custom columns.
+   > **Note**: To view this data, navigate to make.powerapps.com in a new tab. Click Solutions on the left pane to locate your solution. Select the Visit table, then select the Data tab. Click Active Visits in the top right-hand corner to display the view selector, then select Custom columns.
    
 2. Navigate to your **Security Sweep** flow, if not already there.
 
@@ -282,7 +290,8 @@ Your flow will begin sending emails to the email you specified if there are any 
 
 7. Expand **Apply to each**, then expand the **Send an email notification** step. Check the **Subject**, **Email Body** values.
 
-8. Select the back arrow to the Security Sweep flow details. Select **Turn off** on the command bar. This is to prevent flow from executing on a schedule on the test system.
+8. Select the back arrow to the Security Sweep flow details. Select **Turn off** on the command bar. This is to prevent flow from executing every 15 minutes on the test system.
+
 
 ## Example:
 
@@ -290,11 +299,11 @@ Your flow will begin sending emails to the email you specified if there are any 
 * Scott Konersmann's visit has a Scheduled End time more than 15 minutes in the past
 * The visit has an Acual Start time
 
-![Security sweep scheduled flow part 2b](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow7.png)
+![Security sweep scheduled flow part 2b](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow10.png)
 
-As all conditions are met, this will trigger an email:
+As all conditions are met, this will trigger emails every 15 minutes (in this case for the top four visits in the view):
 
-![Security sweep scheduled flow part 2a](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow6.png)
+![Security sweep scheduled flow part 2a](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow11.png)
 
 # Challenges
 
