@@ -76,15 +76,15 @@ We will follow the below steps to design and create the Power BI dashboard:
     > [!IMPORTANT]
     > If you don't see **+New**, you may need to activate the new look for Power BI. Be sure to toggle the **New look** to **On** at the top of your screen.
 
-9. Select **Local File**.
+9. Select **Dataflow**.
 
-10. Locate and select **visits.pbix** file you've downloaded earlier.
+10. Click **add new Tables**.
 
-11. Once data load is complete, select **visits** report (notice that the Type is set to **Report**).
+11. Select **Power Platform** and **Dataflows**.
 
-12. Click **Edit**. If **Edit** menu item is not visible click **...** and then select **Edit**.
+12. Select  **Common Data Service (Legacy)**. Cut and paste the Server Url of your environment as in Task 2 Step 1 below.
 
-13. You have now setup Power BI service to use for your labs. Continue to [Task \#3](#task-3-create-chart-and-time-visualizations), but use the online Power BI service at [https://app.powerbi.com](https://app.powerbi.com) instead of Power BI Desktop throughout the lab.
+13. Continue from Task 2 Step 6 below.
 
 ## Task \#2: Prepare Data
 
