@@ -33,13 +33,13 @@ In this lab, you set up a Portal that we will use in future labs.
 
 ## Task \#1: Create Power Apps portal
 
-1.  Sign in to <https://make.powerapps.com>  This opens the Power Apps maker portal.  
+1.  Use your tenant credentials username and password to set up a Sales Trail in Dynamics365 in an Incognito or Private browser window.  This create a new environment in your tenancy called **Sales Trial**, containing the various sales apps.  
+
+2.  Sign in to <https://make.powerapps.com>  This opens the Power Apps maker portal.  
 
 2.  If the **Environment** displayed in the top right is not your **Sales Trial** environment, click to select this environment.
 
-3.  On the Home page, click on the **Create** then **Portal from blank** panel
-
-    > If you do not see this option, try zooming out.
+3.  On the Home page, click on the **New app** then **Portal** panel
 
 4.  Provide new portal details
 
@@ -49,6 +49,8 @@ In this lab, you set up a Portal that we will use in future labs.
 
     -   Select a base portal **Language**
 
+    - Leave the **Use data from existing website record** checkbox blank.
+
     -   Click **Create**
 
-    > The Portal provisioning process will run anywhere from 30 to 45 minutes. You do not have to wait, as this will continue while moving on to the next module.
+    > The Portal provisioning process will run anywhere from 30 to 45 minutes. You do not have to wait, as this will continue while we move on to the next module.
