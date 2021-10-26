@@ -46,7 +46,7 @@ In this task, you will create a canvas app using the phone layout template based
 
     -   Select your **Sales Trial** environment at the top right if it is not already set.
 
-    -   Select **+ Create** Note that apps and portals can be started from blank, from data, or from templates.  
+    -   Select **+ Create** in the left hand menu.  Note that apps and portals can be started from blank, from data, or from templates.  
 
     -   Select the **Dataverse** icon within **Start from data** on the Home screen.
 
@@ -58,17 +58,17 @@ In this task, you will create a canvas app using the phone layout template based
 
     -   Locate and select your **Visits** table
 
-    -   Select **Connect**  This will open the Power Apps Studio editor. 
+    -   Select **Connect**.  This will open the Power Apps Studio editor. 
 
 3.  The **Welcome to Power Apps Studio** window may appear. Click **Skip**.  You are now editing a new (as yet unnamed) app built on the data we imported in the last lab.  You can preview the app in this unimproved state by clicking the play button near the top left corner of the screen (small play triangle).
 
-**About the Power Apps Studio** The app editor is not intuitive, especially for beginners.  You can change a selected property in two ways - firstly from the dropdown selector on the left of the function line at the top of the screen. This lists the propertues alphabetically. Alternatively, you can use the shortcuts in the Properties tab or Advanced tab with searchbox.  The first allows you to put in values quickly and directly, the second gives you someconvenient shortcuts and the ability to select colours from a palette rather than type RGBA values.  They both produce the same results.  In these exercises we will show you both methods and inform you which we are using.
+**About the Power Apps Studio** The app editor is not intuitive, especially for beginners.  You can change a selected property in two ways - firstly from the dropdown selector on the left of the function line at the top of the screen. This lists the properties alphabetically. Alternatively, you can use the shortcuts in the Properties tab or Advanced tab with searchbox.  The first allows you to put in values quickly and directly, the second gives you some convenient shortcuts and the ability to select colours from a palette rather than type RGBA values.  They both produce exactly the same results.  In these exercises we will show you both methods and inform you which we are using.
 
 4.  Save application
 
     -   Click **File \> Save**.
 
-    -   Press **Save**.   Your new app (called App unless you give it a different name) will now be visible in the Apps section of the Power Apps maker portal, along with the Bellows College Portal and the Portal Management app that is supplied with it.
+    -   Press **Save** and save to the cloud.   Your new app (called App unless you give it a different name) will now be visible in the Apps section of the Power Apps maker portal, along with the Bellows College Portal and the Portal Management app that is supplied with it.
 
 ## Task \#2: Configure Visits Detail Form
 
@@ -98,7 +98,7 @@ In this task, you will configure the Detail form to view information about indiv
     
     * Actual End
     
-7.  Click **Add**  You will see that the new fields have been added in the order in which they were selected.
+7.  Click **Add**  You will see that the new fields have been added in the order in which they were selected.  This saves a lot of rearranging in the next step.
 
 8.  Rearrange fields in the **Fields** pane by dragging and dropping field names up or down. Recommended order is:
     * Code, Name, Building, Visitor, Scheduled Start, Scheduled End, Actual Start, Actual End
@@ -138,9 +138,8 @@ In this task, you will configure a form to edit information about individual vis
 
 8.  You can rearrange fields in the **Fields** pane by dragging and dropping field names up or down, but if you selected them in the order of above they will be ordered correctly.
 
-Recommended order is:
-    
-    * Name, Building, Visitor, Scheduled Start, Scheduled End
+Recommended order is:  **Name, Building, Visitor, Scheduled Start, Scheduled End**
+
     >**Tip:** You can collapse each field by clicking the down arrow beside the field name. 
 
 9.  Close the **Fields** pane.
@@ -169,7 +168,7 @@ In this task, you will configure the pre-generated gallery to display the title,
 
 7.  Select the field again
 
-8.  Press **CTRL-C** then **CTRL-V** to create a copy of the field.
+8.  Press **CTRL-C** then **CTRL-V** to create a copy of the field, note that all the visits in the gallery are updated.
 
 9.  Using either mouse or keyboard, move the copied control down and align it with the other controls in the gallery, beneath the other Date Time field.
 
@@ -198,7 +197,7 @@ Because number of visits continuously grows, users need a feature to filter the 
 8. Locate the **Items** property and click in the text box.
 
 9. In the expression, locate **[@Visits]** and replace it with `Filter(Visits,'Scheduled End' >= DatePicker1.SelectedDate)`. The full expression should look like the following.  (You may find it easier to cut-and-paste the whole expression).
-(This is filtering the view by visits with a scheduled end later than the date in the date picker)
+(This is filtering the view by visits with a scheduled end later than the date in the date picker).
 
    ```
    SortByColumns(
@@ -237,9 +236,9 @@ In this exercise you will test the application and, once successful, you will ad
     
     -   Select a visit and verify that display form is working properly by selecting the **>** symbol to view item details.
     
-    -   Return to the gallery and press **+** in the top right corner to create a new visit. Verify that edit form contains required columns including visitor, building, and scheduled start and end dates.
+    -   Return to the gallery and press **+** in the top right corner to create a new visit by entering an invented name, building, visitor and scheduled dates and clicking the tick icon. Verify that edit form contains required columns including visitor, building, and scheduled start and end dates.
     
-    -   Fill in the information and submit. Verify that the new record appears in the gallery.  You may need to scroll down, search or resort the gallery to see new records.
+    -   Fill in the information and submit. Verify that the new record appears in the gallery.  You may need to scroll down, search or sort the gallery to see new records.
     
     -   Create and verify at least 2 more visits.
     
@@ -255,7 +254,7 @@ In this exercise you will test the application and, once successful, you will ad
 
     -   Click the **Back** arrow to navigate back to the app.
 
-    -   Close the **Designer** tab.
+    -   Close the **Designer** tab by clicking the back arrow.
 
     -   After publishing, when you select your new App in the list in the Power Apps maker portal, the new version will run.  Previously, new versions could only by accessed by selecting edit and previewing. 
 
@@ -274,17 +273,17 @@ We have created our app outside the our Campus Management Solution.  Adding the 
    
 2. Select **Add existing**, then click **App**, and then click **Canvas app**.
 
-3. Select **Outside solutions** tab.
+3. Select **Outside Dataverse** tab.
 
 4. Select your **App** app, click **Add**.
 
-5.  The Solution will now have contain three tables (Building, Visit, Contact) and the new App.  Select the new app and click **Settings**, then click the pencil to rename the App.  Rename it **Campus Staff**  
+5.  The Solution will now have contain three tables (Building, Visit, Contact) and the new App.  Select the new app and click **Settings**, then click the pencil to rename the App.  Rename it **Campus Staff** and Save.  
 
-6.  Select **Solutions**  and choose **Publish all customizations**.
+6.  Select **back to Solutions**  and choose **Publish all customizations**.
 
 # Extension
 
-* You can set a begin and end date range by adding another date picker input, and adding to the gallery filter items
+* You can set a begin and end date range to search by adding another date picker input, and adding to the gallery filter items
 
 SortByColumns(Search(Filter(Visits, 'Scheduled Start' >= DatePicker1.SelectedDate,'Scheduled End' <= DatePicker2.SelectedDate), TextSearchBox1.Text, "bc_code","bc_name"), "bc_code", If(SortDescending1, Descending, Ascending))
 
