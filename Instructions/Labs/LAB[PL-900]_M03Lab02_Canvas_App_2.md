@@ -53,7 +53,7 @@ You will follow the below outline to design the canvas app:
     
 2.  Create new canvas application
 
-    -   Click **New** and select **App \| Canvas App \| Phone Form Factor**.
+    -   Click **New** and select **App \| Canvas App \| Phone Format**.
         This will open the App Editor in a New window.
         
     
@@ -94,9 +94,9 @@ You will follow the below outline to design the canvas app:
 
     -   While still selecting the Text input object, select the text in the **Default** property and clear the value.
     
-    -   Select **Hint Text** property and enter `"Enter visitor code"` as the value (including double quotes.  (This will show hint text when users hover over the search box).
+    -   Select **Hint Text** property and enter `"Enter visitor code"` as the value (including double quotes).  (This will show hint text when users hover over the search box).
     
-    -   Click on **...** next to the control name in tree view (TextInput1), select **Rename**, change the name to `textCode`  (It is good practice to rename controls so that they can be easily found later.)
+    -   Click on **...** next to the control name in tree view (TextInput1), select **Rename**, change the name to `textCode`  (It is good practice to rename controls so that they can be easily identified later.)
     
 3.  Add a form view
 
@@ -188,11 +188,11 @@ In this task, we will create buttons for the user to check visitors in and out o
    
 ## Task \#4: Enable and disable buttons depending on visit data
 
-Once users have looked up the visit, we would like them to use the Check In button to check in for that visit. We would like to enable **Check In** button for to supply actual times for visits that have been previously scheduled. i.e. when the visit record has been located (not blank), record status is active, and the visit has not started yet so the actual start value is blank.  In order to do this we are going to use the **Display Mode** property of the two buttons.  This can be changed in the dropdown menu or in the shortcut menu.  Having set this property we are going to test this functionality using the code value from the previous task.
+Once users have looked up the visit, we would like them to use the Check In button to check in for that visit. We would like to enable **Check In** button to enter actual times for visits that have been previously scheduled. i.e. when the visit record has been located (not blank), record status is active, and the visit has not started yet so the actual start value is blank.  In order to do this we are going to use the **Display Mode** property of the two buttons.  This can be changed in the dropdown menu or in the shortcut menu.  Having set this property we are going to test this functionality using the code value from the previous task.
 
 1. Select the **Check In button** and click on the **Display Mode** property of the button in the advanced section of the Properties tab
 
-2. Enter the expression below in the function bar as the OnSelect property:
+2. Enter the expression below in the function bar as the Display Mode property:
 
       ```
       If(!IsBlank(Visit) 
@@ -216,7 +216,7 @@ We would also like to enable **Check Out** button when the visit record has been
 
 3. Select the Check Out button and change the **Display Mode** property of the button.  
 
-4. Enter the expression below in the function bar as the OnSelect property:
+4. Enter the expression below in the function bar as the Display Mode property:
 5. 
      ```
      If(!IsBlank(Visit) 
@@ -331,7 +331,8 @@ Usability of a mobile app significantly improves when visual indicators are prov
        Icon.EmojiFrown,
        Icon.EmojiSmile
    )
-   ```
+
+   
 You will see the frown emoji icon replace the icon you chose in step 2.
 
 5. To preserve work in progress, click **File** then click **Save**. Use the **Back** arrow to return to the app.
