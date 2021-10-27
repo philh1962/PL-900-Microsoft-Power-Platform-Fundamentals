@@ -57,11 +57,11 @@ The following have been identified as requirements you must implement to complet
 
     -   Click to open your **Campus Management** solution.
 
-2.  Click **New** and select **Cloud flow**. This will open the Power Automate flow editor in a new window.  (If you are using the Solution preview option, you will need to select **New > Automation > Cloud flow > Automated** Give it the flow name of Visit notification, and choose the trigger below).
+2.  Click **New** and select **Cloud flow**. This will open the Power Automate flow editor in a new window.  (If you are using the Solution preview option, you will need to select **New > Automation > Cloud flow > Automated**) Give it the flow name of Visit notification, and choose the trigger below).
 
 3. Select for **Microsoft Dataverse**.
 
-4. Select the trigger **When a row is Created, Updated or Deleted**.
+4. Select the trigger **When a row is added, modified or deleted**.
 
    * Select **Added** for **Change type**
    
@@ -81,7 +81,7 @@ The following have been identified as requirements you must implement to complet
    
    * In the **Row ID** field, select **Visitor (Value)** from the Dynamic content list.
    
-   * On this action, click the ellipsis (**...**) and click **Rename**. Rename this action **"Get the Visitor"**. This is still good practice, so you and other flow editors can understand the purpose of the step without having to dive into the details, as before.
+   * On this action, click the ellipsis (**...**) and click **Rename**. Rename this action **"Get the Visitor"**. This is still a good practice, as before.
 
 8. Click **New Step**. This is the step that will create and send email to the visitor.
 
@@ -110,7 +110,7 @@ The following have been identified as requirements you must implement to complet
         Bellows College
         ```
    
-10.  Select the **Untitled** flow name at the top and rename it to `Visit notification`
+10.  Select the **Untitled** flow name at the top and rename it to `Visit notification` if necessary.
 
 11. Press **Save**
 
@@ -143,7 +143,7 @@ Here will will add a new visit using the Campus Staff app and test our flow.
 
 11.  Navigate back to the previous tab with the flow being tested. Watch as the flow is run. If there are any errors, go back and compare your flow to the example above. If the email is sent successfully, you will receive it in your inbox (it may go into your Junk/Spam folder). 
 
-**Where's my email?** You may find that the email does not arrive - this may be due to security settings in Trial accounts preventing outgoing email.  Open a new tab in your browser and go to **portal.office.com** and select the Outlook icon.  Click on **Sent items**.  You will see the outgoing emails have been rejected by the recipient's email provider.  This is a feature of working in trials, but note that the flow was activated when the record was added, the and the email was composed and set out, just not received:
+**Where's my email?** You may find that the email does not arrive - this may be due to security settings in Trial accounts preventing outgoing email.  Open a new tab in your browser and go to **portal.office.com** and select the Outlook icon.  Click on **Sent items**.  You may see the outgoing emails have been rejected by the recipient's email provider.  This is a feature of working in trials, but note that the flow was activated when the record was added, and the email was composed and set out, just not received:
 
 ![Email sent](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow8%20(1).png)
 
@@ -159,7 +159,8 @@ Close the outlook tab.
 
 # Exercise #2: Create Security Sweep flow
 
-**Objective:** In order to meet the second design requirement, in this exercise you will create a Power Automate flow that performs a security sweep every 15 minutes, and notifies security if any visitors overstay their scheduled time.
+**Objective:** In order to meet the second design requirement, in this exercise you will create a Power Automate flow that performs a security sweep every 15 minutes, and notifies security if any visitors overstay their scheduled time.  
+The previous flow was an automated flow - triggered when a new row was added.  This is a scheduled flow, retrieving data based on the current time.
 
 ## Task #1: Create flow to retrieve records
 
@@ -173,13 +174,9 @@ Close the outlook tab.
 
    -   Click to open your **Campus Management** solution.
 
-2. Click **New** and select **Cloud flow**. This will open the Power Automate flow editor in a new window.
+2. Click **New** and select **Automation>Cloud flow>Scheduled**. Fill in the new **Flow name** as **Security Sweep**.  Set the Flow to run every 15 minutes, and click **Create**.
 
-3. In the Search box search for *recurrence*, select **Schedule** connector, and then select the **Recurrence** trigger.
-
-4. Set **Interval** to **15 minutes**
-
-5. Click **New step**. Select **Microsoft Dataverse** connector. Select **List rows** action.
+3. Click **New step**. Select **Microsoft Dataverse** connector. Select **List rows** action.
 
    * Enter **Visits** as **Table name**
    
@@ -253,9 +250,7 @@ Close the outlook tab.
    Campus Security
    ```
 
-17.  Select flow name **Untitled** in the upper left corner and rename it to **Security Sweep**
-
-18.  Press **Save**
+17.  Press **Save**
 
    With all steps expanded, your flow should look approximately like the following:
 
@@ -297,7 +292,7 @@ Your flow will begin sending emails to the email you specified if there are any 
 
 * This is the Active Visits view (therefore all visits shown are active)
 * Scott Konersmann's visit has a Scheduled End time more than 15 minutes in the past
-* The visit has an Acual Start time
+* The visit has an Actual Start time
 
 ![Security sweep scheduled flow part 2b](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/flow10.png)
 
