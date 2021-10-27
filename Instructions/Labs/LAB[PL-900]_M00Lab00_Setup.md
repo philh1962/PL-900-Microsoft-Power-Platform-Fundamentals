@@ -23,9 +23,7 @@ Campus administration would like to modernize their visitor registration system 
 
 Throughout this course, you will build applications and perform automation to enable the Bellows College administration and security personnel to manage and control access to the buildings on campus.
 
-In this lab, you set up a Portal that we will use in future labs.  
-
-    > This provisioning can run in the background, but can take up to an hour.
+In this lab, you set up a Portal that we will use in future labs.  This provisioning can run in the background, but can take up to an hour.
 
 # Exercise \#1: Provision a Power Apps portal
 
