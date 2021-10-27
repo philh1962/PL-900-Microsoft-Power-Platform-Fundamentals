@@ -103,7 +103,7 @@ In this task, we will modify the default Active Visits view and create a new vie
     
 3.  Click the **Created On** column and select **Remove**. Field **Created On** will now be removed from the view.
 
-4.  Click the **Name** column and select **Remove**. Field **Name** will now be removed from the view.
+4.  Click the **Name** column and select **Remove**. Column **Name** will now be removed from the view.
 
 5.  In the Properties panel on the right, click **Sort by ...** and select **Scheduled Start**. Click on **Scheduled Start** again to change the order to descending.
 
@@ -119,21 +119,19 @@ Now, we will clone the view to create a new view for today's visits.
 
 10.  Click **Add**, select **Add row**.
 
-11.  Select **Scheduled Start** as a field, then select **Today** as the condition in the drop-down. 
+11.  Select **Scheduled Start** as a column, then select **Today** as the condition in the drop-down. (This also removes the specific time condition in the filter).
 
 12.  Click the **...** on the **Status** row and click **Delete**. 
 
 13.  Press **Ok** to save the condition. The view is now filtered to show only records where the Scheduled Start date is today.
 
-14.  Add **Actual Start** and **Actual End** fields to the view. 
-
-    **Note:** Since we no longer filter on the view status, we will see all today's visits including completed ones. These fields will help to differentiate completed visits and visits in progress.
+14.  Add **Actual Start** and **Actual End** columns to the view. (Since we no longer filter on the view status, we will see all today's visits including completed ones. These fields will help to differentiate completed visits and visits in progress).
 
 15.  Click on the **dropdown arrow** by the Save button (be careful not to press the button itself) and select **Save As**.
 
 16.  Change the name to **Today's Visits** and press **Save**.
 
-17.  Click **Publish** and wait for the publishing to complete.
+17.  Click **Publish** and wait for the publishing to complete.  Close the tab.
 
 # Exercise \#2: Create Model-Driven Application
 
@@ -143,22 +141,26 @@ Now, we will clone the view to create a new view for today's visits.
 
 ## Task \#1: Create Application
 
+**NOTE - At time of writing (27/10/21) there are two app designer interfaces in use - the "Classic" app designer and the "Modern" app designer in preview.  They both do the same function. As the Classic is liable to be deprecated and the Modern liable to change, we have included instructions for both.  You may choose to use either - Task 1a for Classic or 1b for Modern.
+
+## Task \1a:  Create Application in Classic app designer:
+
 1.  -   Sign in to <https://make.powerapps.com>
 
     -   While in Sales Trial environment, click to open your **Campus Management**
-        solution.
+        solution to add the Model-Driven App directly in the solution.
     
-2.  Create the Model-Driven Application
+2.  Choose to create the Model-Driven Application in Classic app designer.
 
     -   Click **New** and select **App** and then **Model-driven app**. This will open a new tab.
     
-    -   Enter **[Your Last Name] Campus Management** for Name.
+    -   Enter **[Your Last Name] Campus Management** for Name.  
 
     -   Select **Use existing solution to create the App** checkbox
 
     -   Select **Next**
 
-    -   Select your **Campus Management** solution
+    -   Select your **Campus Management** solution from the list.
     
     -   Click **Done**
     
@@ -232,7 +234,52 @@ Now, we will clone the view to create a new view for today's visits.
 
 16.  Select **Solutions** and select **Publish all Customizations.**
 
-17.  Select **Apps** and your application should now be listed.
+17.  Select **Apps** and your new application should be listed.
+
+
+
+## Task \1b:  Create Application in Modern app designer:
+
+1.  -   Sign in to <https://make.powerapps.com>
+
+    -   While in Sales Trial environment, click to open your **Campus Management**
+        solution to add the Model-Driven App directly in the solution.
+    
+2.  Choose to create the Model-Driven Application in Modern app designer (preview).  Be aware this preview interface is liable to minor changes.
+
+    -   Click **Create** to open the designer.
+    
+    -   Enter **[Your Last Name] Campus Management** for Name and click **Create** .
+
+    -   Select **Add page** 
+
+    -   Choose **Table based view and form**
+
+3.  Select your the tables we want to add to the app.  In this case, tick **Building,  Contact** and **Visit** from the list and select **Add**.
+    
+4.  You will see a preview of the model-driven app ready for customisation.  All the tables have been added to the same screen group, currently called Group1, which we will customise.  In addition, the tables have carried over all their available views - in the case of the system table contacts, there are several that need to be removed.
+
+5.  We are going to rearrange our tables into two groups - **Security**, containing Contacts and Visits, and **Settings**, containing Buildings.  Select the **Navigation** icon in the left hand pane.
+
+6.  In the Navigation pane, select the Group1 line.  Change the title in the right hand pane to Security.  Press tab twice to change the group name. 
+
+7.  Under the renamed Security group, there is a new Subarea called Subarea1.  Select the elipsis on this line and **Remove Subarea1**.
+
+8.  In the Navigation pane, select the Contacts line.  Select the elipsis on this line and move it up until it is under Security.
+
+9.  In the Navigation pane, select the Buildings line.  Select the elipsis on this line and move it up until it is under Contacts.
+
+10.  To add the new group, in the Navigation pane select **Add** and choose **New Group**.  Change the title in the right hand pane to **Settings**.
+
+11.  In the Navigation pane, select the Buildings line.  Select the elipsis on this line and move it until it is under Settings.
+
+12.  To remove the unwanted views for the Contacts table, select the **Pages** icon in the right hand pane. Expand the Contact line.
+
+13.  Select **Contact view**, and in the pane on the right, choose **Manage views**.  Tick the box for **Active Contacts**, and **Save**.
+
+14.  **Save** and **Publish** the app.
+
+
 
 ## Task \#2: Test Application
 
