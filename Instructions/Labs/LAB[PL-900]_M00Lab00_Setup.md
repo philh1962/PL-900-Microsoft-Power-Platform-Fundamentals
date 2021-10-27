@@ -31,9 +31,9 @@ In this lab, you set up a Portal that we will use in future labs.  This provisio
 
 ## Task \#1: Create Power Apps portal
 
-1.  Use your tenant credentials username and password to set up a Sales Trail in Dynamics365 in an Incognito or Private browser window.  This create a new environment in your tenancy called **Sales Trial**, containing the various sales apps.  
+1.  Use your tenant credentials username and password to set up a Sales Trial in Dynamics365 in an Incognito or Private browser window.  This create a new environment in your tenancy called **Sales Trial**, containing the various sales apps.  
 
-2.  Sign in to <https://make.powerapps.com>  This opens the Power Apps maker portal.  
+2.  Sign in to <https://make.powerapps.com>.  This opens the Power Apps maker portal.  
 
 2.  If the **Environment** displayed in the top right is not your **Sales Trial** environment, click to select this environment.
 
