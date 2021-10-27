@@ -43,9 +43,9 @@ You will follow the below outline to design the Power Apps portal:
 
 4.  Locate your **Bellows College Visitors** app that has the **Type** of **Portal**
 
-5.  Click on the app name to open the portal
+5.  Click on the app name to open the portal.
 
-    > You should be redirected to your portal website landing page with a welcome message. Navigate your portal to see what was created by default when you provisioned your portal. You will have two Services pages, an About us page and a search function.  
+    > You should be redirected to your portal website landing page with a welcome message. Navigate your portal to see what was created by default when you provisioned your portal. You will have two Services subpages, an About us page and a search function.  Close the tab.
 
 ## Task \#2: Create a Webpage
 
@@ -55,7 +55,7 @@ You will follow the below outline to design the Power Apps portal:
 
     -   Select **Apps**
     
-    -   Locate the app that has the **Type** of **Portal**
+    -   Locate the **Bellows College Visitors** portal app.
 
     -   Click on the ellipses (**...**) to the right of the portals app name and choose **Edit**
 
@@ -66,11 +66,11 @@ Here we will add a new page to the Table of contents menu so that it can easily 
 
     -   From the command bar on the left, select the page icon **Pages and navigation**
 
-    -   Highlight **Table of Conents**, click the **...** elipsis and choose **Add a child page**
+    -   Highlight **Home**, click the **...** elipsis and choose **Add a child page**
 
-3.  On the new page, in the properties pane, under **Display** change the **Name** from **New page (1)** to `Building Directory` (it may take a moment to appear)
+3.  On the new page, in the properties pane, under **Display** change the **Name** from **New page** to `Building Directory` (it may take a moment to appear)
 
-4.  In the **Partial URL** change the value to `building-directory`, press the Tab key (to initiate auto-save)
+4.  In the **Partial URL** change the value to `building-directory`, press the Tab key (to initiate auto-save).  Changing the partial URL is best practice, and is important for Search Engine Optimisation.
 
     > The title of the page should now read **Building Directory**
     
@@ -79,7 +79,7 @@ In this exercise we are adding some static text and an image to the new page.
 
 1.  Add a section to the webpage
 
-    -   On the canvas (area showing webpage), select the **Page Copy** section. This is the large box around the 2 sentences of text in the middle of your page.
+    -   On the canvas (area showing webpage), select the **Page Copy** section. This is the box around the 2 sentences of text near the top of your page.
 
     -   On the toolbelt (left side), select the **Components** icon
 
@@ -105,13 +105,13 @@ In this exercise we are adding some static text and an image to the new page.
 
     -   On the toolbelt (left side), select the **Components** icon
 
-    -   Choose **Image** from the **Portal components** area
+    -   Choose **Image** from the **Components** icon **Portal components** area
 
-    -   In the properties pane, click **Select an image**. Locate and choose any **searchhero.png**
+    -   In the properties pane, click **Select an image**. Locate and choose **Feature1.png**
     
     -   In the properties pane, click the **Formatting** section drop-down and change the **Width** to 70% (be sure to type the %). You can play around with the sizing of the image until it is as desired.
 
-4.  Click **Browse website** to view the page so far.  
+4.  Click **Browse website** to view the page so far in a new tab, then close the tab.
 
     > You may need to configure your browser to allow pop-ups.
 
@@ -122,7 +122,7 @@ In this exercise we are adding a dynamic list of content from the Dataverse tabl
 
     -   Sign in to <https://make.powerapps.com> (you may still have this open in your tabs)
 
-    -   Locate the app that has the **Type** of **Portal**
+    -   Locate you portal app
 
     -   Click on the ellipses (**...**) and choose **Edit**
     
@@ -142,7 +142,7 @@ In this exercise we are adding a dynamic list of content from the Dataverse tabl
 
     -   On the toolbelt (left side), select the **Components** icon
 
-    -   Choose **List** from the **Portal Components** area (a list component will appear in the new section)
+    -   Choose **List** from the **Portal Components** area (a list graphic will appear in the new section)
     
 3.  Configure the list component
 
@@ -160,7 +160,9 @@ In this exercise we are adding a dynamic list of content from the Dataverse tabl
 
     > You will see an error message that you do not have the permissions to view these records.  Since portals are designed to allow external users to access Dataverse data, we need to set permissions for access.  Return to the portal editor, select the list component and go to **Manage table permissions**.  Choose **New permisson**,  give the permission a name (e.g. Building List),  select the **Building (bc_building)** table and choose **Global Access** as the Access type.  Set the Privileges to Read, and after clicking **+ Add roles**, select **Anonymous Users**. Click **Browse website** to view the page again, and the building list will now be visible in your new page.  This will give you an idea of the granularity of the security setup in portals.
 
-5.  Note that because the Active Buildings view contains the Created On column, these dates are visible on the portal page.
+5.  Browse the website from the Building Directory page.  Note that because the Active Buildings view contains the Created On column, these dates are visible on the portal page.
+
+6.  You can use the elipses in the **Pages and navigation** section of the properties pane (on the left side) to move and remove pages, and to make them subpages so that they appear on the homepage menu.
 
 # Exercise \#2: Change the Portal Theme
 
@@ -172,7 +174,7 @@ In this exercise, you will create a new theme that will alter the color scheme o
 
     -   Sign in to <https://make.powerapps.com> (you may still have this open in your tabs)
 
-    -   Locate the app that has the **Type** of **Portal**
+    -   Locate the your portal app
 
     -   Click on the ellipses (**...**) and choose **Edit**
     
@@ -182,7 +184,7 @@ In this exercise, you will create a new theme that will alter the color scheme o
     
     -   Click the toggle for **Enable basic theme** to turn this feature on.
     
-    -   On one of presets, click the ellipses (**...**) and choose **Customize**  The Dark yellow Preset is particularly lurid.
+    -   On one of presets, click the ellipses (**...**) and choose **Customize**  The Dark yellow preset is particularly lurid and satisfying to change.
     
     -   A copy of the basic theme has been created. 
     
@@ -196,7 +198,7 @@ Your app layout should look similar to the following structure:
 
 ![Example portal](media/9-portallabresult.jpg)
 
-# Challenge
-Explore the **Portal Management** app.
+# Challenges
+1.  How could you remove the Created On dates from your Building Directory page?
 
-Up to now we have only made minor changes to a template portal, but there are many more capabilities and settings in the Portal Management app that is automatically deployed into your environment when you provision a portal.  You can access this by click **Settings > View more settings** in your Portal editor, or by selecting it listed under Apps in the make.powerapps.com screen.
+2.  Explore the **Portal Management** app.  There are many capabilities and settings in the **Portal Management app** that are automatically deployed into your environment when you provision a portal.  You can access this by clicking **Settings > View more settings** in your Portal editor, or by selecting the **Portal Management app** listed under **Apps** in the make.powerapps.com screen.
