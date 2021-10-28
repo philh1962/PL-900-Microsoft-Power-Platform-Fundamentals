@@ -143,7 +143,7 @@ Now, we will clone the view to create a new view for today's visits.
 
 **NOTE - At time of writing (27/10/21) there are two app designer interfaces in use - the "Classic" app designer and the "Modern" app designer in preview.  They both do the same function. As the Classic is liable to be deprecated and the Modern liable to change, we have included instructions for both.  You may choose to use either - Task 1a for Classic or 1b for Modern.
 
-## Task \1a:  Create Application in Classic app designer:
+## Task 1a:  Create Application in Classic app designer:
 
 1.  -   Sign in to <https://make.powerapps.com>
 
@@ -234,11 +234,11 @@ Now, we will clone the view to create a new view for today's visits.
 
 16.  Select **Solutions** and select **Publish all Customizations.**
 
-17.  Select **Apps** and your new application should be listed.
+17.  Select **Apps** and your new application should be listed.  **Now go to task 2.**
 
 
 
-## Task \1b:  Create Application in Modern app designer:
+## Task 1b:  Create Application in Modern app designer:
 
 1.  -   Sign in to <https://make.powerapps.com>
 
