@@ -88,42 +88,36 @@ We will follow the below steps to design and create the Power BI dashboard:
 
 ## Task \#2: Prepare Data
 
-1.  Find out your organization URL
+1.  Open Power BI Desktop, sign in with your provided credentials if prompted.
 
-    * In a new tab, navigate to Power Platform Admin Center at <https://admin.powerplatform.com>
-    
-    * In the left navigation page, select Environments, and then click on your Practice environment.
-    
-    * Right mouse click **Environment URL** on the **Details** panel, then copy the text.  Do not select **Copy link address**, see step 5).
-    
-2. Open Power BI Desktop, sign in with your provided credentials if prompted.
+3. Select **Get data from another source**, or select **Get data > more** .
 
-3. Select **Get data**.
+4. Select **Power Platform** on the left, then select **Dataverse**, and press **Connect**.  This will connect you to your data using your tenant credentials.
 
-4. Select **Power Platform** on the left, then select **Dataverse**, and press **Connect**.
+5. Expand **Sales Trial** node, search for bc and select **bc_Building** and **bc_Visit** entities, click **Load**.
 
-5. Paste the environment URL you copied earlier into the **Server URL** field, press **OK**.  For Dataverse to connect it is important that the link does not start with https:// or finish with a / .  (*eg orge39b691b.crm.dynamics.com **not** https://orge39b691b.crm.dynamics.com/)
+6.  You are given the option of connecting to the data via **Import** or **DirectQuery**.  For the sake of this lab, we will use **Import** as the data access is faster.  The advantages/disadvantages of the two methodologies can be found at https://social.technet.microsoft.com/wiki/contents/articles/53078.power-bi-import-mode-vs-directquery-mode.aspx 
 
-6. Expand **Entities** node, search for bc and select **bc_Building** and **bc_Visit** entities, click **Load**.
-
-7. Once the data is loaded, there are three icons on the left margin of the screen - hover over to identify - these are **Report** (used to produce visuals), **Data** (used to view and change source data), and **Model** (used to set relationships between different tables).
+7. Once the data is loaded, there are three icons on the left margin of the screen - hover over to identify - these are **Report** (used to produce visuals), **Data** (used to view and change source imported data), and **Model** (used to set relationships between different tables).
 Please also note the **Transform Data** tab at the top of the screen - this useful feature enables large scale data transformations on import and can save much time, although it is outside the scope of this lab.  
 
-8.  Click the **Data** icon on the left vertical toolbar. You can click on a field to see it shown as a column in the dataset. 
+8.  Click the **Data** icon on the left vertical toolbar. You can click on a field to see it shown as a column in the dataset. (DirectQuery connections do not have this option).
 
 7. Click **Model** icon on the left vertical toolbar.
 
-8. Drag **bc_buildingid** column from **bc_Building** table and drop it to **bc_building** column in **bc_Visit** table. A line will appear illustrating the relationship between the two tables.(It can be tricky to connect the correct columns - if you hover over the line it will show the connected columns, as below:
+8. Power BI has autodetected the relationships between the two tables. A line will appear illustrating the relationship between the two tables.  If you hover over the line it will show the connected columns, as below:
 
 ![Power BI relationship diagram](https://raw.githubusercontent.com/philh1962/PL-900-Microsoft-Power-Platform-Fundamentals/master/Instructions/Labs/media/revisions/PBI%202.png)
 
-**This creates a relationship between the two tables that Power BI will be able to use to display related data, in this case connecting visit data to the respective building data.**  The line should show a one to many relationship - one building can have many visits.
+**This has created a relationship between the two tables that Power BI will be able to use to display related data, in this case connecting visit data to the respective building data.**  The line shows a one to many relationship - one building can have many visits.
+
+Should you need to edit autodetected relationships, you can select **Manage relationships** in the toolbar.  With more complex datasets this may be necessary, but this is outside the scope of this lab.
 
 9.  Select **Report** icon on the left toolbar.
 
 10. Expand the **bc_Building** node in the **Fields** panel.
 
-11. Click **...** beside **bc_name** and select **Rename**.  Rename the Column **Building** 
+11. Click **...** beside **bc_name** and select **Rename**.  Rename the Column **Building**. (Power BI will use these names in axes and titles in visuals, so it is good practice to change them to more understandable names).
 
 12. Scroll down and expand the **bc_visit** node.
 
@@ -141,16 +135,15 @@ Please also note the **Transform Data** tab at the top of the screen - this usef
 
 3. Drag the **Visit** field and drop it into **Values** target box.
 
-4. Resize the pie chart using corner handles so that all chart components are visible.  The pie chart shows the visits by building.  With the pie chart selected, take the opportunity to try some other visualisations - Funnel, Donut, Stacked Column, Stacked Bar, Treemap.  Set it back to Pie Chart before continuing.
+4. Resize the pie chart using corner handles so that all chart components are visible.  The pie chart shows the visits by building.  With the pie chart selected, take the opportunity to try some other visualisations of varying usefulness - Funnel, Donut, Stacked Column, Stacked Bar, Treemap.  Set it back to Pie Chart before continuing.
 
-5. Click on the report outside of the pie chart to deselect it and select stacked column chart in **Visualizations** pane. 
+5. Click on the report outside of the pie chart to deselect it and select **Stacked column chart** in **Visualizations** pane. 
 
 6. Drag **Visit** field and drop it into **Values** target box.
 
 7. Drag **Start** field and drop it into **Axis** target box.
 
 8. Resize the chart as desired using the corner handles.
-
 
 9. Test the report interactivity:
 
