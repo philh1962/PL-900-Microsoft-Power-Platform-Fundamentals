@@ -47,7 +47,7 @@ Based on what you know so far about Bellows College, consider where else in the 
 
 In this exercise, you will sign up for Power Virtual Agents trial.
 
-1.  Navigate to [Power Virtual Agents](https://powerva.microsoft.com/)
+1.  Navigate to [Power Virtual Agents](https://powerva.microsoft.com/) in your incognito window.
 
 2.  Click **Start Free Trial**.
 
@@ -63,9 +63,9 @@ In this exercise, you will sign up for Power Virtual Agents trial.
 
 8. Close the **Test bot** window.
 
-9. Select **Topics**. Topics are subjects the bot can understand and reply to.  They have at least one trigger phrase that the bot can recognise. The bot comes with some sample user topics and some system topics. (The default greeting above came from the Greeting system topic, which has more than 50 trigger phrases - Hello, Hi, Good morning, Hi there, etc.  All these phrases would trigger the same topic).
+9. Select **Topics**. Topics are subjects the bot can understand and reply to.  They have at least one trigger phrase that the bot can recognise. The bot comes with some sample user topics and some system topics. (The default greeting above came from the Greeting system topic, which has more than 50 trigger phrases - Hello, Hi, Good morning, Hi there, etc.  All these phrases would trigger the same topic).  Do not close this tab.
 
-> One of the features of Power Virtual Agents is that you can quickly incorporate text into bots.  This becomes new topics for you to edit and configure.  FAQ sites make good sources of text, and they can be any publicly available site, even a competitors!  In the next exercise, you will generate your own topics from the US CDC FAQ site. Do not navigate away from this browser window.
+> One of the features of Power Virtual Agents is that you can quickly incorporate text into bots.  This becomes new topics for you to edit and configure.  FAQ sites make good sources of text, and they can be any publicly available site, even a competitors!  In the next exercise, you will generate your own topics from an American Covid FAQ site. 
 
 # Exercise \#2: Create Topics
 
@@ -83,7 +83,7 @@ In this exercise, you will generate topics from the US CDC FAQ site.
 
 6.  Paste the URL you copied in the **Link to online content** textbox and click **Add**.
 
-7.  Click **Start** and wait. This can take a few minutes, depending on the amount of content.  In this case, more than 200 new topics will be suggested.
+7.  Click **Start** and wait. This can take a few minutes, depending on the amount of content.  In this case, more than 200 new topics will be suggested.  Meanwhile, you could click on an existing topic and look at relevant trigger phrases.  When the suggested topics have been "ingested," you will receive a notification.
 
 8. Click to open one of the suggested topics.  It will look similar to the one below:
 
@@ -134,7 +134,7 @@ In this task, you will test the topics you added.
 
 # Exercise \#4: Change the Greeting
 
-In this task, you will change the greeting to COVID-19 specific.
+In this task, you will change the greeting to include COVID-19 information.
 
 1.  Make sure you have **Topics** selected and select the **Existing** tab.
 
@@ -196,4 +196,4 @@ When completed, your published bot should look similar to this:
 * Embed your chatbot on your Bellows College Visitors portal (more information on how to do this under **Add bot to Power Apps** [here](https://docs.microsoft.com/en-us/power-virtual-agents/publication-connect-bot-to-web-channels).)
 
 # Analytics
-* PVA bots have detailed near real time analytics.  This can be used to see what topics are being used most and where users drop out of the process.
+* PVA bots have detailed near real time analytics.  This can be used to see what topics are being used most and where users drop out of the process.  This is useful in future upgrades.
