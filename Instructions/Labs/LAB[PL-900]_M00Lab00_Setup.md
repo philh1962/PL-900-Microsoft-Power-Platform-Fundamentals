@@ -37,13 +37,13 @@ In this lab, you set up a Portal that we will use in future labs.  This provisio
 
 2.  If the **Environment** displayed in the top right is not your **Sales Trial** environment, click to select this environment.
 
-3.  On the Home page, click on the **New app** then **Portal** panel
+3.  On the Home page, click on the **Portal from blank panel
 
 4.  Provide new portal details
 
     -   Enter **```Bellows College Visitors```** as the portal **Name**
 
-    -   Provide a unique URL; **something**.powerappsportals.com (if the name has been taken, choose a different one - perhaps using your initials)
+    -   For the address, provide a unique URL; **something**.powerappsportals.com (if the name has been taken, choose a different one - perhaps using your initials)
 
     -   Select a base portal **Language**
 
@@ -51,4 +51,4 @@ In this lab, you set up a Portal that we will use in future labs.  This provisio
 
     -   Click **Create**
 
-    > The Portal provisioning process will run anywhere from 30 to 45 minutes. You do not have to wait, as this will continue while we move on to the next module.
+    > The Portal provisioning process will run anywhere from 30 to 45 minutes. This will continue while we move on to the next module.
