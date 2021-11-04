@@ -273,7 +273,7 @@ Now, we will clone the view to create a new view for today's visits.
 
 11.  In the Navigation pane, select the Buildings line.  Select the elipsis on this line and move it until it is under Settings.
 
-12.  To remove the unwanted views for the Contacts table, select the **Pages** icon in the right hand pane. Expand the Contact line.
+12.  To remove the unwanted views for the Contacts table, select the **Pages** icon in the left hand pane. Expand the Contact line.
 
 13.  Select **Contact view**, and in the pane on the right, choose **Manage views**.  Tick the box for **Active Contacts**, and **Save**.
 
